@@ -178,7 +178,7 @@ img {
   font-family: 'ZCOOL XiaoWei', serif; }
 
 body {
-  text-transform: capitalize; }
+  text-transform: none; }
 
 nav {
   z-index: 100; }
@@ -233,8 +233,10 @@ nav {
     z-index: 98; }
 
 .p {
+  margin-top: 70px;
   font-family: "Indie Flower", cursive;
-  font-size: 200px; }
+  font-size: 20px;
+  font-weight: bolder; }
 
 @keyframes cambio {
   0% {

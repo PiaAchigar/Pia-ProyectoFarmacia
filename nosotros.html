@@ -21,7 +21,7 @@
 				<img src="multimedia/HunkoLogo.jpg"></img>
 			</div>
 		</div>
-		<nav class="row" class="navbar-toggleable-sm">
+		<nav class="row header" class="navbar-toggleable-sm" id="myHeader">
 			<div class="menu col-xs-12">
 				<ul class="navegador">
 					<li>
@@ -49,9 +49,9 @@
 					<li><a href="index.html"> OFERTAS</a></li>
 					<li><a href="perfumeria.html">PERFUMERIA</a>
 						<ul>
-							<li><a href="perfumeria.html">Hombre</a></li>
-							<li><a href="perfumeria.html">Mujer</a></li>
-							<li><a href="perfumeria.html">Niño/a</a></li>
+							<li><a href="perfumeria.html#hombre">Hombre</a></li>
+							<li><a href="perfumeria.html#mujer">Mujer</a></li>
+							<li><a href="perfumeria.html#chicos">Niño/a</a></li>
 						</ul>
 					</li>
 					<li>
@@ -80,7 +80,7 @@
 	<div class="container">
 		<div class="row">
 			<p class="p">
-				Somos una empresa Familiar, dedicada a brindar bienestar a nuestros clientes. Amamos lo que hacemos. Nuestra atencion carismatica se enfoca en no solo oir al nuestros clientes sino escuchar y satisfacer sus necesidades.
+				Somos una empresa Familiar, dedicada a brindar bienestar a nuestros clientes. <br> Amamos lo que hacemos. Nuestra atencion carismatica se enfoca en no solo oir al nuestros clientes sino escuchar y satisfacer sus necesidades.
 			</p>
 
 		</div>
@@ -141,6 +141,25 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+		// When the user scrolls the page, execute myFunction
+		window.onscroll = function () { myFunction() };
+
+		// Get the header
+		var header = document.getElementById("myHeader");
+
+		// Get the offset position of the navbar
+		var sticky = header.offsetTop;
+
+		// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+	</script>
 </body>
 
 </html>
