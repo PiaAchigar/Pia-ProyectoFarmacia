@@ -1,0 +1,121 @@
+header label{
+	display: none;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	border-right: 1px solid white;
+}
+header label:hover{
+	cursor: pointer;
+	@extend.etiquetaColor;
+}
+.titulo{
+	width: 1000px;
+	margin:auto auto auto 160px;
+}
+header{
+	top: 0px;
+	z-index: 100;
+}
+nav{
+	position: fixed;
+}
+.menu{
+	z-index: 100;
+	margin:auto auto auto 20px;
+	width: 1350px;
+	height: 45px; 
+	li{
+		font-weight: bold;
+		z-index: 100;
+	}
+}
+​
+.menu ul li ul li ul li{
+	display: none;
+}
+​
+.menu ul li ul li:hover ul li{
+	display: block;
+	z-index: 100;
+}
+
+.navegador{
+	@extend.navegadorColor;
+	display: flex;
+	justify-content: space-around;
+	height: 45px;
+	border: 1px solid black;
+	border-radius: 5px;
+	overflow: hidden;
+	align-items: center;
+	z-index: 100;
+}
+
+
+.navegador li ul li{
+	padding: 10px 0px 5px 8px;
+}
+.menu ul li{
+	padding: 10px;
+	height: 45px;
+}
+
+.menu ul li ul{
+	position: absolute;
+	display: none;
+}
+/* Muestra el submenu */
+.menu ul li:hover ul{ 
+	display: block;
+	background-color: rgba(10, 153, 74, 0.5);
+	border-radius: 10px;
+	color: black;
+}
+.menu ul li a{
+	color: black;
+	font-weight: 900;
+	font: size 45;
+}
+
+.navegador li:hover {
+	background: rgba(153, 152, 152, 0.5);
+	border-radius: 10px;
+	justify-content: space-around;
+	color: black;
+} 
+.navegador li ul{
+	margin: 10px 0px 5px -8px;
+	padding: 0px 20px 2px 0px;
+}
+.imgLogo{
+	height: 30px;
+	width: 30px;
+	margin: 0 auto;
+}
+@media(max-width:1050px){
+	.navegador{
+		flex-direction: column;
+		display: block;
+	}
+	.navegador:hover ul{
+		display: block;
+	}
+	.menu ul li:hover ul{
+		background-color: rgba(10, 153, 74, 1);
+	}
+
+	.categoriasPerfumes{
+		margin-top: 250px;
+	}
+}
+
+.categoriasPerfumes{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.rowCategoriasPerfumes h3{
+	width: 100%
+}

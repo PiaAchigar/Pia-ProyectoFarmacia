@@ -1,0 +1,118 @@
+
+@import"_colores.scss";
+@import"_header.scss";
+@import"_perfumeria.scss";
+@import"_farmacia.scss";
+@import"_pie";
+$font_family:'Indie Flower', cursive;
+
+*{
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Indie Flower', cursive;
+	font-family: 'ZCOOL XiaoWei', serif;
+}
+body{
+	text-transform: capitalize;
+}
+nav{
+	z-index: 100;
+}
+  .sticky {
+	position: fixed;
+	top: 0;
+	width: 100%
+  }
+.banner{
+	width: 60%;
+	border: 2px solid gray;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.banner{ 
+	ul{
+	padding: 0%;
+	width: 500%;/*por que son 5 img*/
+	overflow: hidden;
+	display: flex;
+	animation: cambio 20s infinite alternate linear;
+	animation-timing-function: ease-in-out;
+	li{
+		width: 100%;
+		img{/*cada li 100%*/
+			width: 100%;
+		}
+	}
+}
+}
+.tamañoImgBanner{
+	width:600px;
+	height: 590px;
+}
+.oferta{
+	border-radius: 10%;
+	margin-left: 520px;
+	width: 200px;
+}
+
+/*....CONTACTANOS (Nosotros)....*/
+.form{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	border: 1px solid black;
+	border-radius: 10px;
+	justify-items: center;
+	justify-items: self-start;
+	width: 350px;
+	padding: 10px;
+	margin: 70px 50px 40px 50px;
+	div{
+		z-index: 98;
+	}
+	
+}
+.p{
+	font-family: $font_family;
+	font-size: 200px;
+}
+
+@keyframes cambio{
+	0%{
+		margin-left: 0;
+	}
+	18%{
+		margin-left: 0;
+	}
+
+	23%{
+		margin-left: -100%;
+	}
+	41%{
+		margin-left: -100%;
+	}
+
+	46%{
+		margin-left: -200%;
+	}
+	64%{
+		margin-left: -200%;
+	}
+	
+	69%{
+		margin-left: -300%;
+	}
+	87%{
+		margin-left: -300%;
+	}
+
+	92%{
+		margin-left: -400%;
+	}
+	100%{
+		margin-left: -400%;
+	}
+}

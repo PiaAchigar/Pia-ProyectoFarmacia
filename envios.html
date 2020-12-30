@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Keyward" content="farmacia,perfumeria,salud,remedios,medicamentos,perfumes, envios">
+	<meta name="descripcion" content="Farmacia dedicada a brindar bienestar a nuestros clientes, a travez de medicamentos y buena atencion">
+	<title>Envios</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="multimedia/LogoHunko.png">
+
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="titulo" class="row">
+			<div class="col-xs-12">
+				<img src="multimedia/HunkoLogo.jpg"></img>
+			</div>
+		</div>
+		<nav class="row" class="navbar-toggleable-sm">
+			<div class="menu col-xs-12">
+				<ul class="navegador">
+					<li>
+						<div class="imgLogo">
+							<a href="index.html">
+								<img src="multimedia/LogoHunko.png" width="50px" alt="LogoHunkoFarmacia">
+							</a>
+						</div>
+					</li>
+					<li><a href="index.html">CATEGORIAS</a>
+						<ul>
+							<li><a href="#banner">Ofertas</a></li>
+							<li><a href="#">Novedades</a></li>
+							<li><a href="#">Bebes y Maternidad</a></li>
+							<li><a href="perfumeria.html">Perfumes y Fragancias</a></li>
+							<li><a href="#">Dermocosmética</a></li>
+							<li><a href="#">Maquillaje</a></li>
+							<li><a href="#">Cuidado de la Salud</a></li>
+							<li><a href="#">Cuidado corporal</a></li>
+							<li><a href="#">Nutricion/Complementos</a></li>
+							<li><a href="#">Electro Belleza</a></li>
+							<li><a href="farmacia.html">Farmacia</a></li>
+						</ul>
+					</li>
+					<li><a href="index.html"> OFERTAS</a></li>
+					<li><a href="perfumeria.html">PERFUMERIA</a>
+						<ul>
+							<li><a href="perfumeria.html">Hombre</a></li>
+							<li><a href="perfumeria.html">Mujer</a></li>
+							<li><a href="perfumeria.html">Niño/a</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="farmacia.html">FARMACIA</a>
+						<ul>
+							<li>
+								<a href="#obrasSociales">OBRAS SOCIALES</a>
+								<ul>
+									<li><a href="farmacia.html">Osde</a></li>
+									<li><a href="farmacia.html">Swiss Medical</a></li>
+									<li><a href="farmacia.html">Pami</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="nosotros.html"> NOSOTROS</a>
+					</li>
+					<li>
+						<a href="envios.html">ENVIOS</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-12 col-md-4 form" action="/action_page.php">
+				<div>
+					<h2>Envios</h2>
+				</div>
+				<div>
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="nombre">
+				</div>
+				<div>
+					<label for="apellido">Apellido:</label>
+					<input type="text" name="apellido">
+				</div>
+				<div>
+					<label for="email">Email:</label>
+					<input type="email" name="email">
+				</div>
+				<div>
+					<label for="Destino">Provincia/CABA</label>
+					<select name="Destino" class="custom-select mb-3">
+						<option selected>...</option>
+						<option value="Casdo">Provincia</option>
+						<option value="Soltero">CABA</option>
+					</select>
+				</div>
+				<div>
+					<label for="Pago">Medio de Pago</label>
+					<select name="Pago" class="custom-select mb-3">
+						<option selected>...</option>
+						<option value="Casdo">Efectivo</option>
+						<option value="Soltero">Tarjeta Credito</option>
+						<option value="Soltero">Mercado Pago</option>
+					</select>
+				</div>
+				<div>
+					<label for="Domicilio">Domicilio:</label>
+					<!--Caja de texto multilinea-->
+					<textarea placeholder="Escriba aqui..."></textarea>
+				</div>
+				<div>
+					<!--boton limpia datos-->
+					<input type="reset" name="Limpiar" value="Limpiar Formulario" class="btn btn-primary">
+				</div>
+				<div>
+					<!--boton envia datos-->
+					<input type="submit" name="Formulario" value="Enviar" class="btn btn-primary">
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="pie">
+			<p>Seguinos: </p>
+			<img src="multimedia/iconoIG.jpg" class="tamanoIcono">
+			<img src="multimedia/iconoFB.jpg" class="tamanoIcono">
+			<p>Telefonos de Contacto: 46411399</p>
+			<img src="multimedia/iconoWP.jpg" class="tamanoIcono">
+			<p>+54 9 11 6133-3590</p>
+			<p>Correo:</p>
+			<a href="farmaciasocialhunko@gmail.com" class="mail"> farmaciasocialhunko@gmail.com</a>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
