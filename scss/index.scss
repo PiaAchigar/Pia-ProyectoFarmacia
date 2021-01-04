@@ -21,7 +21,8 @@ body{
 nav{
 	z-index: 100;
 }
-  .sticky {
+
+.sticky {
 	position: fixed;
 	top: 0;
 	width: 100%
@@ -33,6 +34,8 @@ nav{
 	overflow: hidden;
 }
 .banner{ 
+	width: 80%;
+	height: 100%;
 	ul{
 	padding: 0%;
 	width: 500%;/*por que son 5 img*/

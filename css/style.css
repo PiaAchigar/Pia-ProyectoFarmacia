@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.etiquetaColor, header label:hover {
+.etiquetaColor {
   background-color: rgba(10, 153, 74, 0.5); }
 
 .navegadorColor, .navegador {
@@ -16,20 +16,25 @@ header label:hover {
   cursor: pointer; }
 
 .titulo {
-  width: 1000px;
-  margin: auto auto auto 160px; }
+  width: 80%; }
 
 header {
   top: 0px;
   z-index: 100; }
 
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
 nav {
-  position: fixed; }
+  position: sticky;
+  width: 100%; }
 
 .menu {
   z-index: 100;
-  margin: auto auto auto 20px;
-  width: 1350px;
+  width: 80%;
+  margin: auto;
   height: 45px; }
   .menu li {
     font-weight: bold;
@@ -115,7 +120,7 @@ h3 {
   font-size: xx-large;
   background-color: #d9d6d1;
   border: 1px solid black;
-  border-radius: 10%;
+  border-radius: 10px;
   padding: 30px;
   margin: 100px;
   width: 100%; }
@@ -129,7 +134,7 @@ h3 {
   z-index: 99; }
 
 .importadosSelectivosMujer img {
-  border-radius: 10%;
+  border-radius: 10px;
   border: 2px solid black;
   z-index: 99; }
 
@@ -194,19 +199,22 @@ nav {
   margin: 20px auto;
   overflow: hidden; }
 
-.banner ul {
-  padding: 0%;
-  width: 500%;
-  /*por que son 5 img*/
-  overflow: hidden;
-  display: flex;
-  animation: cambio 20s infinite alternate linear;
-  animation-timing-function: ease-in-out; }
-  .banner ul li {
-    width: 100%; }
-    .banner ul li img {
-      /*cada li 100%*/
+.banner {
+  width: 80%;
+  height: 100%; }
+  .banner ul {
+    padding: 0%;
+    width: 500%;
+    /*por que son 5 img*/
+    overflow: hidden;
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    animation-timing-function: ease-in-out; }
+    .banner ul li {
       width: 100%; }
+      .banner ul li img {
+        /*cada li 100%*/
+        width: 100%; }
 
 .tamañoImgBanner {
   width: 600px;

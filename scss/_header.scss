@@ -7,23 +7,27 @@ header label{
 }
 header label:hover{
 	cursor: pointer;
-	@extend.etiquetaColor;
 }
 .titulo{
-	width: 1000px;
-	margin:auto auto auto 160px;
+	width: 80%;
 }
 header{
 	top: 0px;
 	z-index: 100;
 }
+.header{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+   }
 nav{
-	position: fixed;
+	position: sticky;
+	width: 100%;
 }
 .menu{
 	z-index: 100;
-	margin:auto auto auto 20px;
-	width: 1350px;
+	width: 80%;
+	margin:auto;
 	height: 45px; 
 	li{
 		font-weight: bold;
