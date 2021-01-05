@@ -101,6 +101,8 @@ nav{
 	.navegador{
 		flex-direction: column;
 		display: block;
+		position: absolute;
+		left: 100px;
 	}
 	.navegador:hover ul{
 		display: block;
