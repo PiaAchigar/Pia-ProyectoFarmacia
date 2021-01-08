@@ -1,19 +1,49 @@
-header label{
-	display: none;
-	width: 50px;
-	height: 50px;
-	padding: 10px;
-	border-right: 1px solid white;
-}
-header label:hover{
-	cursor: pointer;
-}
-.titulo{
-	width: 80%;
-}
+@import"_colores.scss";
+.imgMenu{
+	width: 30px;
+	height: 30px;
+	margin: auto auto 5px 20px;
+  }
+  
 header{
+	position: sticky;
 	top: 0px;
 	z-index: 100;
+}
+.subMenuHunko:hover{
+	border-radius: 10px;
+	background-color:  rgba(97, 191, 26, 0.3);
+		// a{
+		// 	color: black;
+		// 	background-color: rgba(97, 191, 26, 0.3);
+			
+		// 	}
+	}
+
+.ulHunko{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.fixDropdown{
+	padding: auto;
+	border-radius: 10px;
+	background-color:  rgba(97, 191, 26, 0.3);
+}
+
+// header label{
+// 	display: none;
+// 	width: 50px;
+// 	height: 50px;
+// 	padding: 10px;
+// 	border-right: 1px solid white;
+// }
+// header label:hover{
+// 	cursor: pointer;
+// }
+.titulo{
+	width: 80%;
 }
 .header{
 	width: 100%;
@@ -24,51 +54,51 @@ nav{
 	position: sticky;
 	width: 100%;
 }
-.menu{
-	z-index: 100;
-	width: 80%;
-	margin:auto;
-	height: 45px; 
-	li{
-		font-weight: bold;
-		z-index: 100;
-	}
-}
+// .menu{
+// 	z-index: 100;
+// 	width: 80%;
+// 	margin:auto;
+// 	height: 45px; 
+// 	li{
+// 		font-weight: bold;
+// 		z-index: 100;
+// 	}
+// }
 ​
-.menu ul li ul li ul li{
-	display: none;
-}
-​
-.menu ul li ul li:hover ul li{
-	display: block;
-	z-index: 100;
-}
+// .menu ul li ul li ul li{
+// 	display: none;
+// }
+// ​
+// .menu ul li ul li:hover ul li{
+// 	display: block;
+// 	z-index: 100;
+// }
 
-.navegador{
-	@extend.navegadorColor;
-	display: flex;
-	justify-content: space-around;
-	height: 45px;
-	border: 1px solid black;
-	border-radius: 5px;
-	overflow: hidden;
-	align-items: center;
-	z-index: 100;
-}
+// .navegador{
+// 	@extend.navegadorColor;
+// 	display: flex;
+// 	justify-content: space-around;
+// 	height: 45px;
+// 	border: 1px solid black;
+// 	border-radius: 5px;
+// 	overflow: hidden;
+// 	align-items: center;
+// 	z-index: 100;
+// }
 
 
-.navegador li ul li{
-	padding: 10px 0px 5px 8px;
-}
-.menu ul li{
-	padding: 10px;
-	height: 45px;
-}
+// .navegador li ul li{
+// 	padding: 10px 0px 5px 8px;
+// }
+// .menu ul li{
+// 	padding: 10px;
+// 	height: 45px;
+// }
 
-.menu ul li ul{
-	position: absolute;
-	display: none;
-}
+// .menu ul li ul{
+// 	position: absolute;
+// 	display: none;
+// }
 /* Muestra el submenu */
 .menu ul li:hover ul{ 
 	display: block;
@@ -92,36 +122,24 @@ nav{
 	margin: 10px 0px 5px -8px;
 	padding: 0px 20px 2px 0px;
 }
-.imgLogo{
-	height: 30px;
-	width: 30px;
-	margin: 0 auto;
-}
-@media(max-width:1050px){
-	.navegador{
-		flex-direction: column;
-		display: block;
-		position: absolute;
-		left: 100px;
-	}
-	.navegador:hover ul{
-		display: block;
-	}
-	.menu ul li:hover ul{
-		background-color: rgba(10, 153, 74, 1);
-	}
 
-	.categoriasPerfumes{
-		margin-top: 250px;
-	}
-}
 
-.categoriasPerfumes{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
-.rowCategoriasPerfumes h3{
-	width: 100%
-}
+// @media(max-width:1050px){
+// 	.navegador{
+// 		flex-direction: column;
+// 		display: block;
+// 		position: absolute;
+// 		left: 100px;
+// 	}
+// 	.navegador:hover ul{
+// 		display: block;
+// 	}
+// 	.menu ul li:hover ul{
+// 		background-color: rgba(10, 153, 74, 1);
+// 	}
+
+// 	.categoriasPerfumes{
+// 		margin-top: 250px;
+// 	}
+// }

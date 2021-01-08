@@ -2,25 +2,41 @@
 .etiquetaColor {
   background-color: rgba(10, 153, 74, 0.5); }
 
-.navegadorColor, .navegador {
-  background-color: #d9d6d1; }
+#encabezadoColor {
+  background-image: linear-gradient(#61bf1a, white); }
 
-header label {
-  display: none;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-right: 1px solid white; }
+.etiquetaColor {
+  background-color: rgba(10, 153, 74, 0.5); }
 
-header label:hover {
-  cursor: pointer; }
+#encabezadoColor {
+  background-image: linear-gradient(#61bf1a, white); }
+
+.imgMenu {
+  width: 30px;
+  height: 30px;
+  margin: auto auto 5px 20px; }
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 100; }
+
+.subMenuHunko:hover {
+  border-radius: 10px;
+  background-color: rgba(97, 191, 26, 0.3); }
+
+.ulHunko {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; }
+
+.fixDropdown {
+  padding: auto;
+  border-radius: 10px;
+  background-color: rgba(97, 191, 26, 0.3); }
 
 .titulo {
   width: 80%; }
-
-header {
-  top: 0px;
-  z-index: 100; }
 
 .header {
   width: 100%;
@@ -31,44 +47,7 @@ nav {
   position: sticky;
   width: 100%; }
 
-.menu {
-  z-index: 100;
-  width: 80%;
-  margin: auto;
-  height: 45px; }
-  .menu li {
-    font-weight: bold;
-    z-index: 100; }
-
-​ .menu ul li ul li ul li {
-  display: none; }
-
-​ .menu ul li ul li:hover ul li {
-  display: block;
-  z-index: 100; }
-
-.navegador {
-  display: flex;
-  justify-content: space-around;
-  height: 45px;
-  border: 1px solid black;
-  border-radius: 5px;
-  overflow: hidden;
-  align-items: center;
-  z-index: 100; }
-
-.navegador li ul li {
-  padding: 10px 0px 5px 8px; }
-
-.menu ul li {
-  padding: 10px;
-  height: 45px; }
-
-.menu ul li ul {
-  position: absolute;
-  display: none; }
-
-/* Muestra el submenu */
+​
 .menu ul li:hover ul {
   display: block;
   background-color: rgba(10, 153, 74, 0.5);
@@ -90,43 +69,6 @@ nav {
   margin: 10px 0px 5px -8px;
   padding: 0px 20px 2px 0px; }
 
-.imgLogo {
-  height: 30px;
-  width: 30px;
-  margin: 0 auto; }
-
-@media (max-width: 1050px) {
-  .navegador {
-    flex-direction: column;
-    display: block;
-    position: absolute;
-    left: 100px; }
-  .navegador:hover ul {
-    display: block; }
-  .menu ul li:hover ul {
-    background-color: #0a994a; }
-  .categoriasPerfumes {
-    margin-top: 250px; } }
-
-.categoriasPerfumes {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.rowCategoriasPerfumes h3 {
-  width: 100%; }
-
-h3 {
-  text-align: center;
-  font-weight: bold;
-  font-size: xx-large;
-  background-color: #d9d6d1;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 30px;
-  margin: 100px;
-  width: 100%; }
-
 .importadosSelectivosMujer p {
   text-align: center;
   font-weight: bolder;
@@ -142,6 +84,14 @@ h3 {
 
 .margenBotton {
   margin-bottom: 100px; }
+
+.categoriasPerfumes {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.rowCategoriasPerfumes h3 {
+  width: 100%; }
 
 .pie {
   display: flex;
@@ -181,8 +131,7 @@ img {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Indie Flower', cursive;
-  font-family: 'ZCOOL XiaoWei', serif; }
+  font-family: 'Lato', sans-serif; }
 
 body {
   text-transform: none; }
@@ -197,7 +146,6 @@ nav {
 
 .banner {
   width: 60%;
-  border: 2px solid gray;
   margin: 20px auto;
   overflow: hidden; }
 
@@ -210,7 +158,7 @@ nav {
     /*por que son 5 img*/
     overflow: hidden;
     display: flex;
-    animation: cambio 20s infinite alternate linear;
+    animation: cambio 21s infinite alternate linear;
     animation-timing-function: ease-in-out; }
     .banner ul li {
       width: 100%; }
@@ -221,11 +169,6 @@ nav {
 .tamañoImgBanner {
   width: 600px;
   height: 590px; }
-
-.oferta {
-  border-radius: 10%;
-  margin-left: 520px;
-  width: 200px; }
 
 /*....CONTACTANOS (Nosotros)....*/
 .form {
@@ -244,7 +187,7 @@ nav {
 
 .p {
   margin-top: 70px;
-  font-family: "Indie Flower", cursive;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: bolder; }
 
@@ -269,3 +212,8 @@ nav {
     margin-left: -400%; }
   100% {
     margin-left: -400%; } }
+
+h3 {
+  font-size: 5vw;
+  color: #f8f9fa;
+  margin: 3vw 40vw; }

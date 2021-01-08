@@ -4,7 +4,7 @@
 @import"_perfumeria.scss";
 @import"_farmacia.scss";
 @import"_pie";
-$font_family:'Indie Flower', cursive;
+$font_family:'Lato', sans-serif;
 
 *{
 	margin: 0%;
@@ -12,8 +12,9 @@ $font_family:'Indie Flower', cursive;
 	box-sizing: border-box;
 	text-decoration: none;
 	list-style: none;
-	font-family: 'Indie Flower', cursive;
-	font-family: 'ZCOOL XiaoWei', serif;
+	//font-family: 'Indie Flower', cursive;
+	//font-family: 'ZCOOL XiaoWei', serif;
+	font-family: 'Lato', sans-serif;
 }
 body{
 	text-transform:none;
@@ -21,7 +22,6 @@ body{
 nav{
 	z-index: 100;
 }
-
 .sticky {
 	position: fixed;
 	top: 0;
@@ -29,7 +29,7 @@ nav{
   }
 .banner{
 	width: 60%;
-	border: 2px solid gray;
+	//border: 2px solid gray;
 	margin: 20px auto;
 	overflow: hidden;
 }
@@ -41,7 +41,7 @@ nav{
 	width: 500%;/*por que son 5 img*/
 	overflow: hidden;
 	display: flex;
-	animation: cambio 20s infinite alternate linear;
+	animation: cambio 21s infinite alternate linear;
 	animation-timing-function: ease-in-out;
 	li{
 		width: 100%;
@@ -54,11 +54,6 @@ nav{
 .tamañoImgBanner{
 	width:600px;
 	height: 590px;
-}
-.oferta{
-	border-radius: 10%;
-	margin-left: 520px;
-	width: 200px;
 }
 
 /*....CONTACTANOS (Nosotros)....*/
@@ -120,4 +115,9 @@ nav{
 	100%{
 		margin-left: -400%;
 	}
+}
+h3{
+	font-size: 5vw;
+	color:#f8f9fa;
+	margin: 3vw 40vw;
 }

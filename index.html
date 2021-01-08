@@ -1,89 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="Keyward" content="farmacia,perfumeria,salud,remedios,medicamentos,perfumes">
-	<meta name="descripcion" content="Farmacia dedicada a brindar bienestar a nuestros clientes, a travez de medicamentos y buena atencion">
-	<title>Farmacia Social Hunko</title>
+	<meta name="descripcion"
+		content="Farmacia dedicada a brindar bienestar a nuestros clientes, a travez de medicamentos y buena atencion">
+	<title>Hunko Farmacias</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=ZCOOL+XiaoWei&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="multimedia/LogoHunko.png">
 	<link rel="stylesheet" href="css/whatsapp.css">
-
 </head>
-
 <body>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<a href="https://api.whatsapp.com/send?phone=1561333590&text=Hola%21%20En%20que%20te%20podemos%20ayudar?" class="float" target="_blank">
-	<i class="fa fa-whatsapp my-float"></i>
+	<a href="https://api.whatsapp.com/send?phone=1561333590&text=Hola%21%20En%20que%20te%20podemos%20ayudar?"
+		class="float" target="_blank">
+		<i class="fa fa-whatsapp my-float"></i>
 	</a>
+	<div class="col-xs-12 img-fluid titulo">
+		<img src="multimedia/HunkoLogo.jpg">
+	</div>
+
 	<header class="container-fluid">
-		<div class="titulo" class="row">
-			<div class="col-xs-12 img-fluid">
-				<img src="multimedia/HunkoLogo.jpg"></img>
-			</div>
-		</div>
-		<nav class="row header" class="navbar-toggleable-sm" id="myHeader">
-			<div class="menu col-xs-12">
-				<ul class="navegador">
-					<li>
-						<div class="imgLogo">
-							<a href="index.html">
-								<img src="multimedia/LogoHunko.png" width="50px" alt="LogoHunkoFarmacia">
-							</a>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+			<a href="index.html" class="navbar-brand">
+				<img class="imgMenu" src="multimedia/LogoHunko.png" width="50px" alt="LogoHunkoFarmacia">
+			</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse header" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto nav-justified ulHunko">
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							CATEGORIAS
+						</a>
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown ">
+							<a class="dropdown-item" href="index.html#ofertas">Ofertas</a>
+							<a class="dropdown-item" href="#">Novedades</a>
+							<a class="dropdown-item" href="#">Bebes y Maternidad</a>
+							<a class="dropdown-item" href="perfumeria.html">Perfumes y Fragancias</a>
+							<a class="dropdown-item" href="#">Dermocosmética</a>
+							<a class="dropdown-item" href="#">Maquillaje</a>
+							<a class="dropdown-item" href="#">Cuidado de la Salud</a>
+							<a class="dropdown-item" href="#">Cuidado corporal</a>
+							<a class="dropdown-item" href="#">Nutricion/Complementos</a>
+							<a class="dropdown-item" href="#">Electro Belleza</a>
+							<a class="dropdown-item" href="farmacia.html">Farmacia</a>
 						</div>
 					</li>
-					<li><a href="index.html">CATEGORIAS</a>
-						<ul>
-							<li><a href="#banner">Ofertas</a></li>
-							<li><a href="#">Novedades</a></li>
-							<li><a href="#">Bebes y Maternidad</a></li>
-							<li><a href="perfumeria.html">Perfumes y Fragancias</a></li>
-							<li><a href="#">Dermocosmética</a></li>
-							<li><a href="#">Maquillaje</a></li>
-							<li><a href="#">Cuidado de la Salud</a></li>
-							<li><a href="#">Cuidado corporal</a></li>
-							<li><a href="#">Nutricion/Complementos</a></li>
-							<li><a href="#">Electro Belleza</a></li>
-							<li><a href="farmacia.html">Farmacia</a></li>
-						</ul>
+					<li class="nav-item subMenuHunko">
+						<a class="nav-link" href="index.html#ofertas">OFERTAS</a>
 					</li>
-					<li><a href="index.html#ofertas"> OFERTAS</a></li>
-					<li><a href="perfumeria.html">PERFUMERIA</a>
-						<ul>
-							<li><a href="perfumeria.html#hombre">Hombre</a></li>
-							<li><a href="perfumeria.html#mujer">Mujer</a></li>
-							<li><a href="perfumeria.html#chicos">Niño/a</a></li>
-						</ul>
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" href="#">
+							PERFUMERIA
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="perfumeria.html#mujer">Mujer</a>
+							<a class="dropdown-item" href="perfumeria.html#hombre">Hombre</a>
+							<a class="dropdown-item" href="perfumeria.html#chicos">Niño/a</a>
+						</div>
 					</li>
-					<li>
-						<a href="farmacia.html">FARMACIA</a>
-						<ul>
-							<li>
-								<a href="#obrasSociales">OBRAS SOCIALES</a>
-								<ul>
-									<li><a href="farmacia.html">Osde</a></li>
-									<li><a href="farmacia.html">Swiss Medical</a></li>
-									<li><a href="farmacia.html">Pami</a></li>
-								</ul>
-							</li>
-						</ul>
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" href="#">
+							FARMACIA
+						</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a lass="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false" href="#">
+										OBRAS SOCIALES</a>
+											<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+												<a class="dropdown-item" href="farmacia.html">Osde</a>
+												<a class="dropdown-item" href="farmacia.html">Swiss Medical</a>
+												<a class="dropdown-item" href="farmacia.html">Pami</a>
+											</div>
+									<a class="dropdown-item" href="farmacia.html#medicamentos">Medicamentos Venta Libre</a>
+							</div>
 					</li>
-					<li>
-						<a href="nosotros.html"> NOSOTROS</a>
+					<li class="nav-item subMenuHunko">
+						<a class="nav-link" href="nosotros.html">
+							NOSOTROS
+						</a>
 					</li>
-					<li>
-						<a href="envios.html">ENVIOS</a>
+					<li class="nav-item subMenuHunko">
+						<a class="nav-link" href="envios.html">
+							ENVIOS
+						</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 	</header>
+
+	<div class="container-fluid">
+
+	
 	<div class="banner" class="row col-md-12 col-xs-12">
 		<ul>
 			<li><img src="multimedia/agendanos1.png"></li>
@@ -95,21 +119,21 @@
 
 	</div>
 
-	<div class="row oferta" width="5px" height="5px">
-		<!-- con el width y height intenté que me quede el recuadro mas chico, pero no sale-->
-		<H3>OFERTAS</H3>
+	<div class="row ofertas" id="encabezadoColor" >
+		<h3>OFERTAS</h3>
 	</div>
 	<div class="banner" class="row col-md-12 col-xs-12" id="ofertas">
 		<ul>
-			<li><img src="multimedia/dove.jpg" class="tamañoImgBanner"></li>
-			<li><img src="multimedia/stives.jpg" class="tamañoImgBanner"></li>
-			<li><img src="multimedia/nivea.jpg" class="tamañoImgBanner"></li>
-			<li><img src="multimedia/rexona.jpg" class="tamañoImgBanner"></li>
-			<li><img src="multimedia/deoClinical.jpg" class="tamañoImgBanner"></li>
+			<li><img src="multimedia/oferta1.png" class="tamañoImgBanner"></li>
+			<li><img src="multimedia/oferta2.png" class="tamañoImgBanner"></li>
+			<li><img src="multimedia/oferta3.png" class="tamañoImgBanner"></li>
+			<li><img src="multimedia/oferta4.png" class="tamañoImgBanner"></li>
+			<li><img src="multimedia/oferta5.png" class="tamañoImgBanner"></li>
 		</ul>
 
 	</div>
-	<hr>
+</div>
+	
 	<footer>
 		<div class="pie" class="row">
 			<p>Seguinos: </p>
