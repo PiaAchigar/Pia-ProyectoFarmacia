@@ -4,13 +4,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="Keyward" content="farmacia,perfumeria,salud,remedios,medicamentos,perfumes, regalos">
+	<meta name="Keyward" content="farmacia,perfumeria,salud,remedios,medicamentos,perfumes">
 	<meta name="descripcion"
 		content="Farmacia dedicada a brindar bienestar a nuestros clientes, a travez de medicamentos y buena atencion">
 	<title>Perfumeria</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="multimedia/LogoHunko.png">
+	<link rel="stylesheet" href="css/whatsapp.css">
 </head>
 
 <body>
@@ -64,7 +68,7 @@
 							aria-haspopup="true" aria-expanded="false" href="#">
 							PERFUMERIA
 						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="perfumeria.html#mujer">Mujer</a>
 							<a class="dropdown-item" href="perfumeria.html#hombre">Hombre</a>
 							<a class="dropdown-item" href="perfumeria.html#chicos">Niño/a</a>
@@ -75,11 +79,11 @@
 							aria-haspopup="true" aria-expanded="false" href="#">
 							FARMACIA
 						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
 							<a lass="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false" href="#">
 								OBRAS SOCIALES</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="farmacia.html">Osde</a>
 								<a class="dropdown-item" href="farmacia.html">Swiss Medical</a>
 								<a class="dropdown-item" href="farmacia.html">Pami</a>
@@ -103,8 +107,8 @@
 	</header>
 
 	<div class="container categoriasPerfumes">
-		<div class="row" id="mujer">
-			<h3>Mujer</h3>
+		<div class="row mujer" id="encabezadoColor">
+			<h3 id="mujer">Mujer</h3>
 		</div>
 		<div class="row importadosSelectivosMujer margenBotton">
 			<div class="col-12 col-md-6 col-xl-3 margenBotton">
@@ -163,8 +167,8 @@
 
 		<!--Selectivo Hombre-->
 		<div class="row importadosSelectivosHombre">
-			<div class="row" id="hombre">
-				<h3>Hombre</h3>
+			<div class="row" id="encabezadoColor">
+				<h3 id="hombre">Hombre</h3>
 			</div>
 
 			<div class="row importadosSelectivosMujer margenBotton">
@@ -225,8 +229,8 @@
 	</div>
 
 	<div class="row">
-		<div class="row" id="chicos">
-			<h3>Niños-Niñas</h3>
+		<div class="row" id="encabezadoColor">
+			<h3 id="chicos">Niños-Niñas</h3>
 		</div>
 	</div>
 	<footer>
@@ -241,7 +245,7 @@
 			<a href="mailto:farmaciasocialhunko@gmail.com" class="mail"> farmaciasocialhunko@gmail.com</a>
 		</div>
 	</footer>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script>
