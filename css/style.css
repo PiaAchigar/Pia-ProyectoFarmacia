@@ -69,50 +69,61 @@ nav {
   margin: 10px 0px 5px -8px;
   padding: 0px 20px 2px 0px; }
 
-.importadosSelectivosMujer p {
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  text-align: center; }
+  .card img {
+    width: 12vw;
+    margin: auto;
+    padding: 0; }
+  .card h1 {
+    margin: auto; }
+  .card p {
+    margin: auto; }
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px; }
+
+.price {
+  color: grey;
+  font-size: 22px; }
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
   text-align: center;
-  font-weight: bolder;
-  padding: 0%;
-  margin: 20px auto 10px auto;
-  text-decoration: underline;
-  z-index: 99; }
-
-.importadosSelectivosMujer img {
-  border-radius: 10px;
-  border: 2px solid black;
-  z-index: 99; }
-
-.margenBotton {
-  margin-bottom: 100px; }
-
-.categoriasPerfumes {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.rowCategoriasPerfumes h3 {
-  width: 100%; }
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px; }
+  .card button button:hover {
+    opacity: 0.7; }
 
 .pie {
   display: flex;
   font-weight: bold;
   font-size: 100%;
-  border: 1px solid black;
-  word-spacing: 12px;
-  margin: 10px;
-  border-radius: 5px;
-  align-items: flex-end;
-  display: flex;
-  justify-items: center; }
+  word-spacing: 1vw;
+  margin-inline-end: 2vw;
+  font-size: 2vw;
+  color: #f8f9fa; }
 
 .mail {
   text-transform: lowercase;
   margin: auto; }
 
 .tamanoIcono {
-  width: 40px;
-  height: 30px;
-  margin: 8px;
+  width: 4vw;
+  height: auto;
   /* object-fit: cover; */ }
 
 p {
@@ -207,7 +218,7 @@ nav {
 h3 {
   font-size: 5vw;
   color: #f8f9fa;
-  margin: 3vw 40vw; }
+  margin: auto auto 50px auto; }
 
 h2 {
   font: size 4vw; }

@@ -1,25 +1,72 @@
-.importadosSelectivosMujer p{
-	text-align: center;
-	font-weight: bolder;
-	padding: 0%;
-	margin:20px auto 10px auto;
-	text-decoration: underline;
-	z-index: 99;
-}
-.importadosSelectivosMujer img{
-	border-radius: 10px;
-	border: 2px solid black;
-	z-index: 99;
-}
-.margenBotton{
-	margin-bottom: 100px;
-}
-.categoriasPerfumes{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+// .importadosSelectivosMujer p{
+// 	text-align: center;
+// 	font-weight: bolder;
+// 	padding: 0%;
+// 	margin:20px auto 10px auto;
+// 	text-decoration: underline;
+// 	z-index: 99;
+// }
+// .importadosSelectivosMujer img{
+// 	border-radius: 10px;
+// 	border: 2px solid black;
+// 	z-index: 99;
+// }
 
-.rowCategoriasPerfumes h3{
-	width: 100%
-}
+// .categoriasPerfumes{
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// }
+
+// .rowCategoriasPerfumes h3{
+// 	width: 100%
+// }
+
+.card {
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	//max-width: 300px;
+	//margin: 10px 0.5vw;
+	text-align: center;
+	img{
+		width:12vw;
+		margin: auto;
+		padding: 0;
+	}
+	h1{
+		margin: auto;
+	}
+	p{
+		margin: auto;
+	}
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+	padding: 2px 16px;
+  }
+  .price {
+	color: grey;
+	font-size: 22px;
+  }
+  
+  .card button {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 16px;
+	button:hover {
+		opacity: 0.7;
+	  }
+  }

@@ -3,22 +3,25 @@
 	display: flex;
 	font-weight: bold;
 	font-size: 100%;
-	border: 1px solid black;
-	word-spacing: 12px;
-	margin: 10px;
-	border-radius: 5px;
-	align-items: flex-end;
-	display: flex;
-	justify-items: center;
+	//border: 1px solid black;
+	word-spacing: 1vw;
+	margin-inline-end: 2vw;
+	//border-radius: 5px;
+	//align-items: flex-end;
+	//display: flex;
+	//justify-items: center;
+	font-size: 2vw;
+	color:#f8f9fa;
+	
 } 
 .mail{
 	text-transform: lowercase;
 	margin:auto;
 }
 .tamanoIcono{
-	 width: 40px;
-	 height: 30px;
-	 margin: 8px;
+	 width: 4vw;
+	 height: auto;
+	 //margin: 8px;
 	 /* object-fit: cover; */
 }
 p{
