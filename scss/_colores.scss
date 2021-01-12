@@ -3,6 +3,9 @@ $nav-color:rgb(217, 214, 209);
 .etiquetaColor{
     background-color: $color-etiqueta;
 }
-#encabezadoColor{
+#fondoDegradeVerde{
     background-image: linear-gradient(rgb(97,191,26), white);
+}
+#fondoDegradeGris{
+    background-image: linear-gradient(rgb(99,107,112), white);
 }

@@ -2,14 +2,20 @@
 .etiquetaColor {
   background-color: rgba(10, 153, 74, 0.5); }
 
-#encabezadoColor {
+#fondoDegradeVerde {
   background-image: linear-gradient(#61bf1a, white); }
+
+#fondoDegradeGris {
+  background-image: linear-gradient(#636b70, white); }
 
 .etiquetaColor {
   background-color: rgba(10, 153, 74, 0.5); }
 
-#encabezadoColor {
+#fondoDegradeVerde {
   background-image: linear-gradient(#61bf1a, white); }
+
+#fondoDegradeGris {
+  background-image: linear-gradient(#636b70, white); }
 
 .imgMenu {
   width: 30px;
@@ -108,28 +114,40 @@ nav {
   .card button button:hover {
     opacity: 0.7; }
 
+.divPie {
+  display: flex; }
+
 .pie {
-  display: flex;
+  display: block;
   font-weight: bold;
-  font-size: 100%;
-  word-spacing: 1vw;
-  margin-inline-end: 2vw;
-  font-size: 2vw;
+  margin-top: 2vw;
+  font-size: 15px;
   color: #f8f9fa; }
+  .pie div {
+    width: 60vw;
+    padding: 10px;
+    margin: 0 30px; }
+    .pie div p {
+      margin-right: 40px;
+      justify-content: space-evenly; }
+    .pie div img {
+      margin-right: 15px;
+      width: 30px;
+      height: 30px; }
+    .pie div a {
+      margin: 0;
+      text-transform: lowercase; }
 
-.mail {
-  text-transform: lowercase;
-  margin: auto; }
-
-.tamanoIcono {
-  width: 4vw;
-  height: auto;
-  /* object-fit: cover; */ }
-
-p {
-  margin: auto;
-  margin-left: 30px;
-  justify-content: space-evenly; }
+.pieDerecho {
+  display: block;
+  margin-left: 10vw;
+  margin-top: 2vw;
+  width: 1vw;
+  padding: 0 10px; }
+  .pieDerecho ul li a {
+    font-weight: bold;
+    font-size: 20px;
+    color: #f8f9fa; }
 
 * {
   margin: 0%;
