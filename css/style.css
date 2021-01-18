@@ -8,6 +8,9 @@
 #fondoDegradeGris {
   background-image: linear-gradient(#636b70, white); }
 
+#fondoFooter {
+  background-image: linear-gradient(#636b70, #adadad); }
+
 .etiquetaColor {
   background-color: rgba(10, 153, 74, 0.5); }
 
@@ -16,6 +19,9 @@
 
 #fondoDegradeGris {
   background-image: linear-gradient(#636b70, white); }
+
+#fondoFooter {
+  background-image: linear-gradient(#636b70, #adadad); }
 
 .imgMenu {
   width: 30px;
@@ -116,40 +122,80 @@ nav {
     opacity: 0.7;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); }
 
-.divPie {
-  display: flex; }
+.footer {
+  width: 100%; }
 
-.pie {
-  display: block;
-  font-weight: bold;
-  margin-top: 3vw;
-  font-size: 15px;
-  color: #f8f9fa; }
-  .pie div {
-    width: 60vw;
-    padding: 10px;
-    margin: 0 30px; }
-    .pie div p {
-      margin-right: 40px;
-      justify-content: space-evenly; }
-    .pie div img {
-      margin-right: 15px;
-      width: 30px;
-      height: 30px; }
-    .pie div a {
-      margin: 0;
-      text-transform: lowercase; }
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); }
 
-.pieDerecho {
-  display: block;
-  margin-left: 10vw;
-  margin-top: 3vw;
-  width: 1vw;
-  padding: 0 10px; }
-  .pieDerecho ul li a {
-    font-weight: bold;
-    font-size: 20px;
-    color: #f8f9fa; }
+.redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; }
+
+.titles {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); }
+
+.img-redes {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.img-redes-t {
+  width: 140px; }
+
+.contacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  font-size: 1rem; }
+
+.h3-contacto {
+  font-size: 1rem;
+  margin: 0 auto; }
+
+.he-redes {
+  font-size: 1.5rem; }
+
+.text-contacto {
+  color: #ccc; }
+
+.container-right iframe {
+  width: 95%;
+  text-align: center;
+  margin: auto; }
+
+.margen {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.container-left .contacto {
+  margin-top: 20%; }
+
+.ocultar {
+  display: none; }
+
+@media (max-width: 600px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column; }
+  .titles {
+    display: none; }
+  .ocultar {
+    display: block; }
+  .sucursales {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px; }
+  .container-right iframe {
+    width: 100%;
+    text-align: center;
+    padding: 10px; } }
 
 * {
   margin: 0%;
