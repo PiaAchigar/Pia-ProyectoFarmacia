@@ -13,11 +13,7 @@ header{
 .subMenuHunko:hover{
 	border-radius: 10px;
 	background-color:  rgba(97, 191, 26, 0.3);
-		// a{
-		// 	color: black;
-		// 	background-color: rgba(97, 191, 26, 0.3);
-			
-		// 	}
+	
 	}
 
 .ulHunko{
@@ -32,16 +28,7 @@ header{
 	background-color:  rgba(97, 191, 26, 0.3);
 }
 
-// header label{
-// 	display: none;
-// 	width: 50px;
-// 	height: 50px;
-// 	padding: 10px;
-// 	border-right: 1px solid white;
-// }
-// header label:hover{
-// 	cursor: pointer;
-// }
+
 .titulo{
 	width: 80vw;
 }
@@ -54,51 +41,6 @@ nav{
 	position: sticky;
 	width: 100%;
 }
-// .menu{
-// 	z-index: 100;
-// 	width: 80%;
-// 	margin:auto;
-// 	height: 45px; 
-// 	li{
-// 		font-weight: bold;
-// 		z-index: 100;
-// 	}
-// }
-​
-// .menu ul li ul li ul li{
-// 	display: none;
-// }
-// ​
-// .menu ul li ul li:hover ul li{
-// 	display: block;
-// 	z-index: 100;
-// }
-
-// .navegador{
-// 	@extend.navegadorColor;
-// 	display: flex;
-// 	justify-content: space-around;
-// 	height: 45px;
-// 	border: 1px solid black;
-// 	border-radius: 5px;
-// 	overflow: hidden;
-// 	align-items: center;
-// 	z-index: 100;
-// }
-
-
-// .navegador li ul li{
-// 	padding: 10px 0px 5px 8px;
-// }
-// .menu ul li{
-// 	padding: 10px;
-// 	height: 45px;
-// }
-
-// .menu ul li ul{
-// 	position: absolute;
-// 	display: none;
-// }
 /* Muestra el submenu */
 .menu ul li:hover ul{ 
 	display: block;
