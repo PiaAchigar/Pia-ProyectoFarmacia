@@ -7,7 +7,7 @@
 	<meta name="Keyward" content="farmacia,perfumeria,salud,remedios,medicamentos,perfumes">
 	<meta name="descripcion"
 		content="Farmacia dedicada a brindar bienestar a nuestros clientes, a travez de medicamentos y buena atencion">
-	<title>Envios</title>
+	<title>Dermocosmética</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -30,15 +30,10 @@
 </div>
 
 <header class="container-fluid">
-
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div>
-			<a href="index.html" class="navbar-brand">
-				<img class="imgMenu" src="multimedia/LogoHunko.png" width="50px" alt="LogoHunkoFarmacia">
-			</a>
-			
-			<p class="">Inicio</p>
-		</div>
+		<a href="index.html" class="navbar-brand">
+			<img class="imgMenu" src="multimedia/LogoHunko.png" width="50px" alt="LogoHunkoFarmacia">
+		</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,27 +43,30 @@
 		<div class="collapse navbar-collapse header" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto nav-justified ulHunko">
 				<li class="nav-item dropdown subMenuHunko">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						CATEGORIAS
 					</a>
 					<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown ">
 						<a class="dropdown-item" href="index.html#ofertas">Ofertas</a>
-						<a class="dropdown-item" href="#">Novedades</a>
+						<a class="dropdown-item" href="index.html#novedades">Novedades</a>
 						<a class="dropdown-item" href="#">Bebes y Maternidad</a>
 						<a class="dropdown-item" href="perfumeria.html">Perfumes y Fragancias</a>
-						<a class="dropdown-item" href="#">Dermocosmética</a>
-						<a class="dropdown-item" href="#">Maquillaje</a>
 						<a class="dropdown-item" href="#">Cuidado de la Salud</a>
-						<a class="dropdown-item" href="#">Cuidado corporal</a>
 						<a class="dropdown-item" href="#">Nutricion/Complementos</a>
-						<a class="dropdown-item" href="#">Electro Belleza</a>
 						<a class="dropdown-item" href="farmacia.html">Farmacia</a>
 					</div>
 				</li>
-				<li class="nav-item subMenuHunko">
-					<a class="nav-link" href="index.html#ofertas">OFERTAS</a>
+				<li class="nav-item dropdown subMenuHunko">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false" href="#">MARCAS</a>
+					<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="index.html#marcas">La Roche Posay</a>
+						<a class="dropdown-item" href="index.html#marcas">Eucerin</a>
+						<a class="dropdown-item" href="index.html#marcas">Vichy</a>
+						<a class="dropdown-item" href="index.html#marcas">Dermaglos</a>
+						<a class="dropdown-item" href="index.html#marcas">Bagovit</a>
+					</div>
 				</li>
 				<li class="nav-item dropdown subMenuHunko">
 					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -86,37 +84,46 @@
 						aria-haspopup="true" aria-expanded="false" href="#">
 						FARMACIA
 					</a>
-						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
-								<a lass="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false" href="#">
-									OBRAS SOCIALES</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="farmacia.html">Osde</a>
-											<a class="dropdown-item" href="farmacia.html">Swiss Medical</a>
-											<a class="dropdown-item" href="farmacia.html">Pami</a>
-										</div>
-								<a class="dropdown-item" href="farmacia.html#medicamentos">Medicamentos Venta Libre</a>
-						</div>
+					<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+						
+						<a class="dropdown-item" href="farmacia.html#obrasSociales">Obras Sociales</a>
+						<a class="dropdown-item" href="farmacia.html#electroFarmacia">Electro Farmacia</a>
+						<a class="dropdown-item" href="farmacia.html#medicamentos">Medicamentos Venta Libre</a>
+					</div>
 				</li>
-				<li class="nav-item subMenuHunko">
-					<a class="nav-link" href="nosotros.html">
+				<li class="nav-item dropdown subMenuHunko">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false" href="#">
+						DERMOCOSMETICA
+					</a>
+					<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="dermo.html">Protecion Solar</a>
+						<a class="dropdown-item" href="dermo.html">Cuidado Facial</a>
+						<a class="dropdown-item" href="dermo.html">Cuidado Corporal</a>
+						<a class="dropdown-item" href="dermo.html">Maquillaje</a>
+						<a class="dropdown-item" href="dermo.html">Electro Belleza</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown subMenuHunko">
+					<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false" href="#">
 						NOSOTROS
 					</a>
-				</li>
-				<li class="nav-item subMenuHunko">
-					<a class="nav-link" href="envios.html">
-						ENVIOS
-					</a>
+					<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="nosotros.html#historia">Nuestra Historia</a>
+						<a class="dropdown-item" href="nosotros.html#valores">Nuestros Valores</a>
+						<a class="dropdown-item" href="nosotros.html#peticos">Principios Éticos</a>
+					</div>
 				</li>
 			</ul>
 		</div>
 	</nav>
 </header>
 	<div class="container">
-		<div class="row d-flex justify-content-center">
-			<div class="col-12 col-md-4 form" action="/action_page.php">
+		<form class="row d-flex justify-content-center">
+			<div class="col-12 col-md-4 form-group" action="/action_page.php">
 				<div>
-					<h2>Envios</h2>
+					<h2>Envios a Domicilio, dejanos tus datos</h2>
 				</div>
 				<div>
 					<label for="nombre">Nombre:</label>
@@ -150,18 +157,19 @@
 				<div>
 					<label for="Domicilio">Domicilio:</label>
 					<!--Caja de texto multilinea-->
-					<textarea placeholder="Escriba aqui..."></textarea>
+					<textarea placeholder="Escriba aqui..." class="thing"></textarea>
 				</div>
 				<div>
 					<!--boton limpia datos-->
-					<input type="reset" name="Limpiar" value="Limpiar Formulario" class="btn btn-primary">
+					<input type="reset" name="Limpiar" value="Limpiar Formulario" class="btn btn-dark mb-1">
 				</div>
 				<div>
 					<!--boton envia datos-->
-					<input type="submit" name="Formulario" value="Enviar" class="btn btn-primary">
+					<!-- <input type="submit" name="Formulario" value="Enviar" class="btn btn-primary"> -->
+					<button type="submit" class="btn btn-dark">Enviar</button>
 				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 	<footer class="footer" id="fondoFooter">
 		<div class="titles">
@@ -198,8 +206,8 @@
 		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<scrip src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<scrip src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></scrip>
 	<script>
 		// When the user scrolls the page, execute myFunction
 		window.onscroll = function () { myFunction() };
@@ -217,6 +225,11 @@
 			} else {
 				header.classList.remove("sticky");
 			}
+			
+ 	 	function limpiarFormulario() {
+    		document.getElementById("miForm").reset();
+ 		 }
+
 		}
 	</script>
 

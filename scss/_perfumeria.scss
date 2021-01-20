@@ -70,6 +70,14 @@
 		background-color:rgb(99,107,112);
 		opacity: 0.7;
 		box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+		transform: scale(2,1);
 	  }
 	
+  }
+  .caja{
+	display: block; 
+	padding-left: 1vw;
+  }
+  .hoverButton:hover{
+	transform: scale(1.2,1.2);
   }

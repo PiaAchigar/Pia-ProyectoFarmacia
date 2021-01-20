@@ -27,9 +27,7 @@
 	</div>
 
 	<header class="container-fluid">
-
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
 			<a href="index.html" class="navbar-brand">
 				<img class="imgMenu" src="multimedia/LogoHunko.png" width="50px" alt="LogoHunkoFarmacia">
 			</a>
@@ -48,20 +46,24 @@
 						</a>
 						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown ">
 							<a class="dropdown-item" href="index.html#ofertas">Ofertas</a>
-							<a class="dropdown-item" href="#">Novedades</a>
+							<a class="dropdown-item" href="index.html#novedades">Novedades</a>
 							<a class="dropdown-item" href="#">Bebes y Maternidad</a>
 							<a class="dropdown-item" href="perfumeria.html">Perfumes y Fragancias</a>
-							<a class="dropdown-item" href="#">Dermocosmética</a>
-							<a class="dropdown-item" href="#">Maquillaje</a>
 							<a class="dropdown-item" href="#">Cuidado de la Salud</a>
-							<a class="dropdown-item" href="#">Cuidado corporal</a>
 							<a class="dropdown-item" href="#">Nutricion/Complementos</a>
-							<a class="dropdown-item" href="#">Electro Belleza</a>
 							<a class="dropdown-item" href="farmacia.html">Farmacia</a>
 						</div>
 					</li>
-					<li class="nav-item subMenuHunko">
-						<a class="nav-link" href="index.html#ofertas">OFERTAS</a>
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" href="#">MARCAS</a>
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="index.html#marcas">La Roche Posay</a>
+							<a class="dropdown-item" href="index.html#marcas">Eucerin</a>
+							<a class="dropdown-item" href="index.html#marcas">Vichy</a>
+							<a class="dropdown-item" href="index.html#marcas">Dermaglos</a>
+							<a class="dropdown-item" href="index.html#marcas">Bagovit</a>
+						</div>
 					</li>
 					<li class="nav-item dropdown subMenuHunko">
 						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -80,26 +82,35 @@
 							FARMACIA
 						</a>
 						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
-							<a lass="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false" href="#">
-								OBRAS SOCIALES</a>
-							<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="farmacia.html">Osde</a>
-								<a class="dropdown-item" href="farmacia.html">Swiss Medical</a>
-								<a class="dropdown-item" href="farmacia.html">Pami</a>
-							</div>
+							
+							<a class="dropdown-item" href="farmacia.html#obrasSociales">Obras Sociales</a>
+							<a class="dropdown-item" href="farmacia.html#electroFarmacia">Electro Farmacia</a>
 							<a class="dropdown-item" href="farmacia.html#medicamentos">Medicamentos Venta Libre</a>
 						</div>
 					</li>
-					<li class="nav-item subMenuHunko">
-						<a class="nav-link" href="nosotros.html">
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" href="#">
+							DERMOCOSMETICA
+						</a>
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="dermo.html">Protecion Solar</a>
+							<a class="dropdown-item" href="dermo.html">Cuidado Facial</a>
+							<a class="dropdown-item" href="dermo.html">Cuidado Corporal</a>
+							<a class="dropdown-item" href="dermo.html">Maquillaje</a>
+							<a class="dropdown-item" href="dermo.html">Electro Belleza</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" href="#">
 							NOSOTROS
 						</a>
-					</li>
-					<li class="nav-item subMenuHunko">
-						<a class="nav-link" href="envios.html">
-							ENVIOS
-						</a>
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="nosotros.html#historia">Nuestra Historia</a>
+							<a class="dropdown-item" href="nosotros.html#valores">Nuestros Valores</a>
+							<a class="dropdown-item" href="nosotros.html#peticos">Principios Éticos</a>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -107,7 +118,55 @@
 	</header>
 
 	<div class="container">
-		<div class="row d-flex justify-content-center">
+		<div  class="abajo" id="accordion">
+
+			<div class="card">
+			  <div class="card-header">
+				<a class="card-link text-info" data-toggle="collapse" href="#collapseOne">
+				  OSDE
+				</a>
+			  </div>
+			  <div id="collapseOne" class="collapse" data-parent="#accordion">
+				<div class="card-body">
+				  <a href="https://www.osde.com.ar/index.html#!homepage.html" target="blank">OSDE</a>
+				  <p>Atendemos recetas de OSDE, para lo cual es necesario contar con la credencial y su receta vigente</p>
+				</div>
+			  </div>
+			</div>
+		  
+			<div class="card">
+			  <div class="card-header">
+				<a class="collapsed card-link text-info" data-toggle="collapse" href="#collapseTwo">
+				  Swiss Medical
+				</a>
+			  </div>
+			  <div id="collapseTwo" class="collapse" data-parent="#accordion">
+				<div class="card-body">
+				  <a href="https://www.swissmedical.com.ar/prepagaclientes/" target="blank">Swiss</a>
+				  <p>Atendemos recetas de Swiss Medical, para lo cual es necesario contar con la credencial y su receta vigente</p>
+				</div>
+			  </div>
+			</div>
+		  
+			<div class="card">
+			  <div class="card-header">
+				<a class="collapsed card-link text-info" data-toggle="collapse" href="#collapseThree">
+				  PAMI
+				</a>
+			  </div>
+			  <div id="collapseThree" class="collapse" data-parent="#accordion">
+				<div class="card-body">
+				  <a href="https://prestadores.pami.org.ar/receta-electronica.php" target="blank">PAMI recetas</a>
+				  <p>Atendemos recetas electronicas y fisicas de PAMI, para lo cual es necesario contar con la oblea del socio y su receta vigente</p>
+				</div>
+			  </div>
+			</div>
+		  
+		  </div>
+
+
+
+		<form class="row d-flex justify-content-center">
 			<div class="col-12 col-md-4 form" action="/action_page.php">
 				<div>
 					<h2>Solicite su medicamento</h2>
@@ -123,14 +182,15 @@
 				</div>
 				<div>
 					<!--boton limpia datos-->
-					<input type="reset" name="Limpiar" value="Limpiar Formulario" class="btn btn-primary">
+					<input type="reset" name="Limpiar" value="Limpiar Formulario" class="btn btn-dark mb-1">
 				</div>
 				<div>
 					<!--boton envia datos-->
-					<input type="submit" name="Formulario" value="Enviar" class="btn btn-primary">
+					<!-- <input type="submit" name="Formulario" value="Enviar" class="btn btn-primary"> -->
+					<button type="submit" class="btn btn-dark">Enviar</button>
 				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 	<footer class="footer" id="fondoFooter">
 		<div class="titles">
@@ -188,6 +248,9 @@
 				header.classList.remove("sticky");
 			}
 		}
+		function limpiarFormulario() {
+    		document.getElementById("miForm").reset();
+ 		 }
 	</script>
 </body>
 

@@ -27,9 +27,7 @@
 	</div>
 
 	<header class="container-fluid">
-
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
 			<a href="index.html" class="navbar-brand">
 				<img class="imgMenu" src="multimedia/LogoHunko.png" width="50px" alt="LogoHunkoFarmacia">
 			</a>
@@ -51,17 +49,21 @@
 							<a class="dropdown-item" href="index.html#novedades">Novedades</a>
 							<a class="dropdown-item" href="#">Bebes y Maternidad</a>
 							<a class="dropdown-item" href="perfumeria.html">Perfumes y Fragancias</a>
-							<a class="dropdown-item" href="#">Dermocosmética</a>
-							<a class="dropdown-item" href="#">Maquillaje</a>
 							<a class="dropdown-item" href="#">Cuidado de la Salud</a>
-							<a class="dropdown-item" href="#">Cuidado corporal</a>
 							<a class="dropdown-item" href="#">Nutricion/Complementos</a>
-							<a class="dropdown-item" href="#">Electro Belleza</a>
 							<a class="dropdown-item" href="farmacia.html">Farmacia</a>
 						</div>
 					</li>
-					<li class="nav-item subMenuHunko">
-						<a class="nav-link" href="index.html#ofertas">OFERTAS</a>
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" href="#">MARCAS</a>
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="index.html#marcas">La Roche Posay</a>
+							<a class="dropdown-item" href="index.html#marcas">Eucerin</a>
+							<a class="dropdown-item" href="index.html#marcas">Vichy</a>
+							<a class="dropdown-item" href="index.html#marcas">Dermaglos</a>
+							<a class="dropdown-item" href="index.html#marcas">Bagovit</a>
+						</div>
 					</li>
 					<li class="nav-item dropdown subMenuHunko">
 						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -80,26 +82,35 @@
 							FARMACIA
 						</a>
 						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
-							<a lass="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false" href="#">
-								OBRAS SOCIALES</a>
-							<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="farmacia.html">Osde</a>
-								<a class="dropdown-item" href="farmacia.html">Swiss Medical</a>
-								<a class="dropdown-item" href="farmacia.html">Pami</a>
-							</div>
+							
+							<a class="dropdown-item" href="farmacia.html#obrasSociales">Obras Sociales</a>
+							<a class="dropdown-item" href="farmacia.html#electroFarmacia">Electro Farmacia</a>
 							<a class="dropdown-item" href="farmacia.html#medicamentos">Medicamentos Venta Libre</a>
 						</div>
 					</li>
-					<li class="nav-item subMenuHunko">
-						<a class="nav-link" href="nosotros.html">
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" href="#">
+							DERMOCOSMETICA
+						</a>
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="dermo.html">Protecion Solar</a>
+							<a class="dropdown-item" href="dermo.html">Cuidado Facial</a>
+							<a class="dropdown-item" href="dermo.html">Cuidado Corporal</a>
+							<a class="dropdown-item" href="dermo.html">Maquillaje</a>
+							<a class="dropdown-item" href="dermo.html">Electro Belleza</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown subMenuHunko">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false" href="#">
 							NOSOTROS
 						</a>
-					</li>
-					<li class="nav-item subMenuHunko">
-						<a class="nav-link" href="envios.html">
-							ENVIOS
-						</a>
+						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="nosotros.html#historia">Nuestra Historia</a>
+							<a class="dropdown-item" href="nosotros.html#valores">Nuestros Valores</a>
+							<a class="dropdown-item" href="nosotros.html#peticos">Principios Éticos</a>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -119,91 +130,91 @@
 				<input class="price" type="checkbox" >$7800</input>
 				<p>50 ml</p>
 				<input class="price" type="checkbox">$6000</input>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 				<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 				<p>Ralph Lauren</p>
 				<p>EDT</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 				<img src="multimedia/pacoRBlackXSMujer.png" alt="">
 				<p>Paco Rabanne</p>
 				<p>Black XS</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-3 col-xl-3 card">
 				<img src="multimedia/idole.jpg" alt="">
 				<p>Lancome</p>
 				<p>Idole</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/BlackOpiumYvesSLMujer.jpg" alt="">
 				<p>Yves Saint Laurent</p>
 				<p>Opium Black</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/ninaRougeMujer.png" alt="">
 				<p>Nina Ricci</p>
 				<p>Rouge</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/AnaisAnaisCacha.png" alt="">
 				<p>Cacharel</p>
 				<p>Anais Anais</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/calvinKleinEternMujer.png" alt="">
 				<p>Calvin Klein</p>
 				<p>Eternity</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/tommyGirl.png" alt="">
 				<p>Tommy Hilfiger</p>
 				<p>Tommy Girl</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/linterditGivenchyMujer.png" alt="">
 				<p>Givenchy</p>
 				<p>L´interdit</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/JadorDior.png" alt="">
 				<p>Dior</p>
 				<p>Jador</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/LeauKenzoMujer.png" alt="">
 				<p>Kenzo</p>
 				<p>L´eau Kenzo</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 			<div class="col-12 col-md-4 col-xl-3 card">
 				<img src="multimedia/SiArmaniMujer.png" alt="">
 				<p>Armani</p>
 				<p>Si</p>
 				<p class="price">$7800</p>
-				<p><button>Agregar</button></p>
+				<p><button class="hoverButton">Agregar</button></p>
 			</div>
 		</div>
 		<!--SemiSelectivos Mujer-->
@@ -218,56 +229,56 @@
 						<p>Antonio Banderas</p>
 						<p>Her Golden Secret</p>
 						<p class="price">$2500</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/HerSTemptation.jpg" alt="">
 						<p>Antonio Banderas</p>
 						<p>Her Secret Temptation</p>
 						<p class="price">$2500</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/HerSDesire.jpg" alt="">
 						<p>Antonio Banderas</p>
 						<p>Her Secret Desire</p>
 						<p class="price">$2500</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/HerSecret.png" alt="">
 						<p>Antonio Banderas</p>
 						<p>Her Secret</p>
 						<p class="price">$2500</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 						<p>Adolfo Dominguez</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 						<p>Elizabeth Arden</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 						<p>Shakira</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 						<p>Benetton</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 				</div>
 
@@ -282,14 +293,14 @@
 						<p>Paula Candamber</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 						<p>Canonr</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
@@ -297,7 +308,7 @@
 						<p>Canon</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 				</div>
 			</div>
@@ -314,28 +325,28 @@
 						<p>Carolina Herrera</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/hugoBoss.png" alt="">
 						<p>Hugo Boss</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/SavageDior.jpg" alt="">
 						<p>Dior</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 						<img src="multimedia/GivenchyBlue.jpg" alt="">
 						<p>Givenchy</p>
 						<p>EDT</p>
 						<p class="price">$7800</p>
-						<p><button>Agregar</button></p>
+						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 				</div>
 			</div>
