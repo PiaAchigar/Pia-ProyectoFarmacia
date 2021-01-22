@@ -127,29 +127,30 @@
 					<p>Carolina Herrera</p>
 					<p>Good Girl</p>
 					<p>100 ml</p>
-					<input class="price" type="checkbox">$7800</input>
-					<p>50 ml</p>
-					<input class="price" type="checkbox">$6000</input>
+					<p>$8800</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 					<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 					<p>Ralph Lauren</p>
-					<p>EDT</p>
-					<p class="price">$7800</p>
+					<p>Ralph</p>
+					<p>80 ml</p>
+					<p class="price">$6500</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 					<img src="multimedia/pacoRBlackXSMujer.png" alt="">
 					<p>Paco Rabanne</p>
 					<p>Black XS</p>
-					<p class="price">$7800</p>
+					<p>80 ml</p>
+					<p class="price">$8900</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-3 col-xl-3 card">
 					<img src="multimedia/idole.jpg" alt="">
 					<p>Lancome</p>
 					<p>Idole</p>
+					<p>75 ml</p>
 					<p class="price">$7800</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
@@ -157,6 +158,7 @@
 					<img src="multimedia/BlackOpiumYvesSLMujer.jpg" alt="">
 					<p>Yves Saint Laurent</p>
 					<p>Opium Black</p>
+					<p>100 ml</p>
 					<p class="price">$7800</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
@@ -164,49 +166,56 @@
 					<img src="multimedia/ninaRougeMujer.png" alt="">
 					<p>Nina Ricci</p>
 					<p>Rouge</p>
-					<p class="price">$7800</p>
+					<p>80 ml</p>
+					<p class="price">$7900</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
 					<img src="multimedia/AnaisAnaisCacha.png" alt="">
 					<p>Cacharel</p>
 					<p>Anais Anais</p>
-					<p class="price">$7800</p>
+					<p>80 ml</p>
+					<p class="price">$6800</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
 					<img src="multimedia/calvinKleinEternMujer.png" alt="">
 					<p>Calvin Klein</p>
 					<p>Eternity</p>
-					<p class="price">$7800</p>
+					<p>75 ml</p>
+					<p class="price">$8000</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
 					<img src="multimedia/tommyGirl.png" alt="">
 					<p>Tommy Hilfiger</p>
 					<p>Tommy Girl</p>
-					<p class="price">$7800</p>
+					<p>75 ml</p>
+					<p class="price">$7500</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
 					<img src="multimedia/linterditGivenchyMujer.png" alt="">
 					<p>Givenchy</p>
 					<p>L´interdit</p>
-					<p class="price">$7800</p>
+					<p>80 ml</p>
+					<p class="price">$9800</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
 					<img src="multimedia/JadorDior.png" alt="">
 					<p>Dior</p>
 					<p>Jador</p>
-					<p class="price">$7800</p>
+					<p>100 ml</p>
+					<p class="price">$9900</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
 					<img src="multimedia/LeauKenzoMujer.png" alt="">
 					<p>Kenzo</p>
 					<p>L´eau Kenzo</p>
-					<p class="price">$7800</p>
+					<p>75 ml</p>
+					<p class="price">$7950</p>
 					<p><button class="hoverButton">Agregar</button></p>
 				</div>
 				<!-- <div class="col-12 col-md-4 col-xl-3 card">
@@ -508,11 +517,58 @@
 				</div>
 			</div>
 		</div>
-
-
-		
-	
-	
+	</div>
+	<div class="container mt-5">
+		<form class="row d-flex justify-content-center">
+			<div class="col-12 col-md-4 form-group" action="/action_page.php">
+				<div>
+					<h2>Envios a Domicilio, dejanos tus datos</h2>
+				</div>
+				<div>
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="nombre">
+				</div>
+				<div>
+					<label for="apellido">Apellido:</label>
+					<input type="text" name="apellido">
+				</div>
+				<div>
+					<label for="email">Email:</label>
+					<input type="email" name="email">
+				</div>
+				<div>
+					<label for="Destino">Provincia/CABA</label>
+					<select name="Destino" class="custom-select mb-3">
+						<option selected>...</option>
+						<option value="Casdo">Provincia</option>
+						<option value="Soltero">CABA</option>
+					</select>
+				</div>
+				<div>
+					<label for="Pago">Medio de Pago</label>
+					<select name="Pago" class="custom-select mb-3">
+						<option selected>...</option>
+						<option value="Casdo">Efectivo</option>
+						<option value="Soltero">Tarjeta Credito</option>
+						<option value="Soltero">Mercado Pago</option>
+					</select>
+				</div>
+				<div>
+					<label for="Domicilio">Domicilio:</label>
+					<!--Caja de texto multilinea-->
+					<textarea placeholder="Escriba aqui..." class="thing"></textarea>
+				</div>
+				<div>
+					<!--boton limpia datos-->
+					<input type="reset" name="Limpiar" value="Limpiar Formulario" class="btn btn-dark mb-1">
+				</div>
+				<div>
+					<!--boton envia datos-->
+					<!-- <input type="submit" name="Formulario" value="Enviar" class="btn btn-primary"> -->
+					<button type="submit" class="btn btn-dark">Enviar</button>
+				</div>
+			</div>
+		</form>
 	</div>
 	<footer class="footer" id="fondoFooter">
 		<div class="titles">
