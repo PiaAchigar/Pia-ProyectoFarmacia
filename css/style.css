@@ -155,9 +155,6 @@ nav {
   margin-left: 10px;
   margin-right: 10px; }
 
-.img-redes-t {
-  width: 140px; }
-
 .contacto {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
