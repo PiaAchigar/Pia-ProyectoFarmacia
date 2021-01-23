@@ -47,10 +47,7 @@
 						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown ">
 							<a class="dropdown-item" href="index.html#ofertas">Ofertas</a>
 							<a class="dropdown-item" href="index.html#novedades">Novedades</a>
-							<a class="dropdown-item" href="#">Bebes y Maternidad</a>
 							<a class="dropdown-item" href="perfumeria.html">Perfumes y Fragancias</a>
-							<a class="dropdown-item" href="#">Cuidado de la Salud</a>
-							<a class="dropdown-item" href="#">Nutricion/Complementos</a>
 							<a class="dropdown-item" href="farmacia.html">Farmacia</a>
 						</div>
 					</li>
@@ -94,11 +91,11 @@
 							DERMOCOSMETICA
 						</a>
 						<div class="dropdown-menu fixDropdown" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="dermo.html">Protecion Solar</a>
-							<a class="dropdown-item" href="dermo.html">Cuidado Facial</a>
-							<a class="dropdown-item" href="dermo.html">Cuidado Corporal</a>
-							<a class="dropdown-item" href="dermo.html">Maquillaje</a>
-							<a class="dropdown-item" href="dermo.html">Electro Belleza</a>
+							<a class="dropdown-item" href="dermo.html#solares">Protecion Solar</a>
+							<a class="dropdown-item" href="dermo.html#facial">Cuidado Facial</a>
+							<a class="dropdown-item" href="dermo.html#corporal">Cuidado Corporal</a>
+							<a class="dropdown-item" href="dermo.html#maqui">Maquillaje</a>
+							<a class="dropdown-item" href="dermo.html#electro">Electro Belleza</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown subMenuHunko">
@@ -458,19 +455,19 @@
 						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
-						<img src="multimedia/SavageDior.jpg" alt="">
-						<p>Dior</p>
-						<p>Savage</p>
+						<img src="multimedia/colbertCode.png" alt="">
+						<p>Colbert Code</p>
+						<p>Magistral Lacroze</p>
 						<p>100ml EDP</p>
-						<p class="price">$10000</p>
+						<p class="price">$1100</p>
 						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
-						<img src="multimedia/GivenchyBlue.jpg" alt="">
-						<p>Givenchy</p>
-						<p>Blue</p>
-						<p>100ml EDP</p>
-						<p class="price">$9800</p>
+						<img src="multimedia/colbertPino.png" alt="">
+						<p>Colbert</p>
+						<p>Pino Con Vaporizador</p>
+						<p>60ml EDT</p>
+						<p class="price">$450</p>
 						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 				</div>
@@ -479,7 +476,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="row col-12" id="fondoDegradeGris">
-					<h3 id="hombre">Niños-Niñas</h3>
+					<h3 id="chicos">Niños-Niñas</h3>
 				</div>
 				<div class="row">
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
@@ -499,19 +496,19 @@
 						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
-						<img src="multimedia/SavageDior.jpg" alt="">
-						<p>Dior</p>
-						<p>Savage</p>
-						<p>100ml EDP</p>
-						<p class="price">$10000</p>
+						<img src="multimedia/cheekyBoy.png" alt="">
+						<p>Cheeky</p>
+						<p>Cool Boys</p>
+						<p>100ml EDT</p>
+						<p class="price">$950</p>
 						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
-						<img src="multimedia/GivenchyBlue.jpg" alt="">
-						<p>Givenchy</p>
-						<p>Blue</p>
-						<p>100ml EDP</p>
-						<p class="price">$9800</p>
+						<img src="multimedia/pibes.png" alt="">
+						<p>Pibes</p>
+						<p>Pibes Future Kids Perfume Niños</p>
+						<p>80ml EDT</p>
+						<p class="price">$450</p>
 						<p><button class="hoverButton">Agregar</button></p>
 					</div>
 				</div>
@@ -520,7 +517,7 @@
 	</div>
 	<div class="container mt-5">
 		<form class="row d-flex justify-content-center">
-			<div class="col-12 col-md-4 form-group" action="/action_page.php">
+			<div class="col-12 col-md-4 form-group" action="/action_page.php" id="fondoDegradeGris">
 				<div>
 					<h2>Envios a Domicilio, dejanos tus datos</h2>
 				</div>
@@ -555,16 +552,12 @@
 				</div>
 				<div>
 					<label for="Domicilio">Domicilio:</label>
-					<!--Caja de texto multilinea-->
 					<textarea placeholder="Escriba aqui..." class="thing"></textarea>
 				</div>
 				<div>
-					<!--boton limpia datos-->
 					<input type="reset" name="Limpiar" value="Limpiar Formulario" class="btn btn-dark mb-1">
 				</div>
 				<div>
-					<!--boton envia datos-->
-					<!-- <input type="submit" name="Formulario" value="Enviar" class="btn btn-primary"> -->
 					<button type="submit" class="btn btn-dark">Enviar</button>
 				</div>
 			</div>
@@ -579,19 +572,22 @@
 			<div class="container-left">
 				<h3 class="sucursales ocultar">Siguenos</h3>
 				<div class="redes">
-					<a href=""><img src="multimedia/instagram.png" class="img-redes" alt=""></a>
-					<a href=""><img src="multimedia/facebook.png" class="img-redes" alt=""></a>
-					<a href=""><img src="multimedia/tiktok-removebg-preview.png" class="img-redes" alt=""></a>
+					<a href="https://www.instagram.com/farmaciasocialhunko/" target="blank"><img
+							src="multimedia/instagram.png" class="img-redes" alt=""></a>
+					<a href="https://www.facebook.com/FarmaciaSocialHunko" target="blank"><img
+							src="multimedia/facebook.png" class="img-redes" alt=""></a>
+					<a href="https://www.tiktok.com/@farma.perfu.hunko?lang=es" target="blank"><img
+							src="multimedia/tiktok-removebg-preview.png" class="img-redes" alt=""></a>
 				</div>
 				<div class="contacto">
 					<h3 class="h3-contacto">Lineas Fijas:</h3>
-					<p class="text-contacto">78542145 - 6546656</p>
+					<p class="text-contacto">46445761 / 46411399</p>
 					<h3 class="h3-contacto">WhatsApp:</h3>
-					<p class="text-contacto">+54 2165146100</p>
-					<h3 class="h3-contacto">Correo Liniers:</h3><a href="#">
+					<p class="text-contacto">+54 11-61333590</p>
+					<h3 class="h3-contacto">Correo Liniers:</h3><a href="mailto:farmaciasocialhunko@gmail.com" target="blank">
 						<p>Farmacia Social Hunko</p>
 					</a>
-					<h3 class="h3-contacto">Correo Caseros:</h3><a href="#">
+					<h3 class="h3-contacto">Correo Caseros:</h3><a href="mailto:farmaciahunko@gmail.com" target="blank">
 						<p>Farmacia Hunko</p>
 					</a>
 				</div>
