@@ -35,3 +35,4 @@ function Total(cantidadProd){
 //   agregar = prompt("Desea agregar otro producto al carrito? SI/NO")
 // }
 // alert("Gracias por confiar en ´La Perfumeria´")
+console.log(window)
