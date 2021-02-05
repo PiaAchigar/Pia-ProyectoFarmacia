@@ -10,16 +10,12 @@ function Carrito(producto, cantidad, precio){
   this.precio = precio
   this.getMonto = function(){return  precio * cantidad}
 }
-function Total(productos){
-  var suma = 0
-  productos.forEach(function(item) {
-    suma += item.precio * item.cantidad;
-  })
- return suma
-}
 let cantidadProd;
+let agregar = prompt("Desea agregar productos al carrito? SI/NO");
 
-var agregar = prompt("Desea agregar productos al carrito? SI/NO");
+while (agregar == "" || agregar == null) {
+  nombre = prompt("Desea agregar productos al carrito? SI/NO")
+}
 
 if(agregar.toLowerCase() === 'si') {
    
@@ -37,10 +33,12 @@ if(agregar.toLowerCase() === 'si') {
     productos.push(item)
     console.log(productos)
   }
-  var precioTotal = Total(productos);
-   
-  alert("El monto a pagar seria " + precioTotal);
-  console.log(precioTotal);
+  
+  let nodoElemento = crearNodo("elemento", "h3")
+  let nodoTexto = crearNodo("texto", "El monto a pagar seria $" + Total(productos))
+  atarNodo(nodoElemento, nodoTexto)
+  atarNodo(document.getElementById("desafio7-JS"), nodoElemento)
+
   alert("Gracias por confiar en ´La Perfumeria´");
    
 } else {
