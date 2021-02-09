@@ -1,20 +1,33 @@
 
-var perfumeMujerImportado = ["Good Girl-CH","Ralph Lauren-EDT","Paco Rabanne-Black XS","Lancome-Idole","Yves Saint Laurent-Opium Black","Nina Ricci-Rouge","Cacharel-Anais Anais","Calvin Klein-Eternity","Tommy Hilfiger-Tommy Girl","Givenchy-Linterdit","Dior-Jador","Kenzo-Leau Kenzo","Armani-Si"]
-var precioPerfumeMujerInt = [9000,7800,8800,9800,9500,7800,7100,6800,7200,7800,9900,7800,8500]
-var productos = [];
-var item = {};
+let perfumeMujerImportado = ["Good Girl-CH","Ralph Lauren-EDT","Paco Rabanne-Black XS","Lancome-Idole","Yves Saint Laurent-Opium Black","Nina Ricci-Rouge","Cacharel-Anais Anais","Calvin Klein-Eternity","Tommy Hilfiger-Tommy Girl","Givenchy-Linterdit","Dior-Jador","Kenzo-Leau Kenzo","Armani-Si"]
+let precioPerfumeMujerInt = [9000,7800,8800,9800,9500,7800,7100,6800,7200,7800,9900,7800,8500]
+let productos = [];
+let item = {};
 let cantidadProd;
-let agregar = prompt("Desea agregar productos al carrito? SI/NO");
+let nroArticulo = 1
 
-while (agregar == "" || agregar == null) {
-  agregar = prompt("Desea agregar productos al carrito? SI/NO")
+document.getElementById("productoAlCarrito").addEventListener("click",  agregar)
+
+function agregar() {// no me funciona con Ralph Lauren
+  let nodoElemento = document.createElement("p") //acá que mas puedo pasar? cualquier etiqueta de html?
+  nodoElemento.setAttribute("style", "color:green")
+  let producto = document.getElementById("productoAlCarrito").value
+  let nodoTexto = document.createTextNode("Articulo " + nroArticulo + " "+ producto)
+
+  nodoElemento.appendChild(nodoTexto)
+
+  document.getElementById("agregarAlCarrito").appendChild(nodoElemento)
+
+  nroArticulo += 1
 }
-console.log (agregar + "este")
+
+
 if(agregar.toLowerCase() == 'si') {
   console.log (agregar + "adentro")
-  cantidadProd = parseInt(prompt("Cuantos productos desea agregar?", "Numérico"));
+  cantidadProd = parseInt(prompt("Cuantos productos desea agregar?","Numérico"))
   console.log (agregar + "paso")
   for(var i = cantidadProd; i >= 0; i--){
+    console.log (agregar + "pasoFor")
     let cod = parseInt(prompt("Ingrese el codigo del producto", "Ej: 1"))
     let cantid = prompt("Cantidad de unidades?", "Ej: 1")
      item = {
