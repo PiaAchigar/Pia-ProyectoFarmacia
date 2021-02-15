@@ -1,10 +1,7 @@
 function agregar(productoClicCod) {// Agrega a mi arrayCarrito el producto Cliqueado, productoClic es el codigo
-  console.log(productoClicCod)
-  //let productoCodigo = parseInt(productoClicCod)
-    if(!existeEnCarrito(productoCodigo)){//entra si aun no hizo click nunca en ese producto
-      
-    let productoItem = new Item(productoCodigo, 1)
-    console.log("entro al if" + productoItem.codigo + "" + productoCodigo)
+    if(!existeEnCarrito(productoClicCod)){//entra si aun no hizo click nunca en ese producto
+    let productoItem = new Item(productoClicCod, 1)
+    console.log("entro al if..." + productoItem.codigo + productoItem.nombre)
     arrayCarrito.push(productoItem)//me guardo en un arrayCarrito los productos que va cliqueando
     }else{//entra si el usu ya habia cliqueado antes el producto
       for(let i = 0; i<arrayCarrito.length ; i++){
@@ -27,12 +24,14 @@ function agregar(productoClicCod) {// Agrega a mi arrayCarrito el producto Cliqu
 }
   //control, si ya existe en el carrito
 function existeEnCarrito(productoCodigo){
+  console.log("existe en carrito" + productoCodigo)
   if(arrayCarrito.length == 0){
     return existe = false
-    console.log("if de fun existe" + productoCodigo)
+    console.log("if de f existe" + productoCodigo)
   }else{
+    console.log("else de existe en carrito")
     for(let i = 0; i>arrayCarrito.length;i++){
-      console.log (arrayCarrito[i].codigo)
+      console.log ("for de existeEnCarrito"+arrayCarrito[i].codigo)
       if(productoCodigo == arrayCarrito[i]){
         return existe = true
       }

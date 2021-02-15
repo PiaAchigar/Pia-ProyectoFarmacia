@@ -6,8 +6,8 @@ let btnComprarArray = document.querySelectorAll('.productoAlCarrito') // creo un
 //document.getElementById("productoAlCarrito").addEventListener("click",  agregar)
 btnComprarArray.forEach(button => {  //recorrre el array para obtener cada uno de los botones y asignarle el evento on click y la funcion agregar
   button.addEventListener('click', function(event) {
-      agregar(event.target.value)//le paso el elemento cliqueado (string)
-      console.log(event.target.value)//imprime el numero perfectamente
+      agregar(event.currentTarget.value)//le paso el elemento cliqueado (string)
+      console.log("forEach..."+event.currentTarget.value)//imprime el numero perfectamente
   } )
   
 })
