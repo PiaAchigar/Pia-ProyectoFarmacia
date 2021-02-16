@@ -1,41 +1,49 @@
-function agregar(productoClicCod) {// Agrega a mi arrayCarrito el producto Cliqueado, productoClic es el codigo
+function agregar(productoClicCod) {
     if(!existeEnCarrito(productoClicCod)){//entra si aun no hizo click nunca en ese producto
     let productoItem = new Item(productoClicCod, 1)
-    console.log("entro al if..." + productoItem.codigo + productoItem.nombre)
-    arrayCarrito.push(productoItem)//me guardo en un arrayCarrito los productos que va cliqueando
+    arrayCarrito.push(productoItem)//me guarda los productos que va cliqueando
     }else{//entra si el usu ya habia cliqueado antes el producto
       for(let i = 0; i<arrayCarrito.length ; i++){
-        console.log("entra al for")
-        if(arrayCarrito[i].codigo == productoCodigo){
+        if(arrayCarrito[i].codigo == productoClicCod){
         arrayCarrito[i].cantidad+=1
+      //let p = document.getElementBytagName()
+      //tengo q borrar los nodos repetidos
       }
     }
     }
-    for(let k =0 ; k<arrayCarrito.length; k++){
-      let nodoTexto = ""
-      let nodoElemento = document.createElement("p") //creo el elemento que voy a atar
-      nodoElemento.setAttribute("style", "color:green")// le ato un atto a mi elemento
-      nodoTexto = document.createTextNode(arrayCarrito[k].cantidad + " "+ arrayCarrito[k].producto)// creo un nodo tipo Texto
-      nodoElemento.appendChild(nodoTexto)// ato el nodo texto al elemento html
-      document.getElementById("agregarAlCarrito").appendChild(nodoElemento)// hago aparecer el producto que agrego en pantalla
-    }  
+    let html = '' //Seteo un string llamado html (puede ser el nombre que sea)
+    let cart = document.getElementById("agregarAlCarrito")//Llamo al elemento donde quieres mostrar los productos
+    cart.innerHTML = ''//Seteo su html ''
+    
+    arrayCarrito.forEach(function(producto) {//hago un forEach en lugar del for porque es un array y es mucho mas comodo
+        html += `<p style="color:green">${producto.cantidad} ${producto.nombre}</p>` //l voy sumando a la variable html un string que luego sera un tag de html
+        cart.innerHTML = html //aqui se convierte en un tag de html
+    })
+    // for(let k =0 ; k<arrayCarrito.length; k++){
+    //   let nodoTexto = ""
+    //   let nodoElemento = document.createElement("p") //creo el elemento que voy a atar
+    //   nodoElemento.setAttribute("style", "color:green")// le ato un atto a mi elemento
+    //   nodoTexto = document.createTextNode(arrayCarrito[k].cantidad + " "+ arrayCarrito[k].nombre)// creo un nodo tipo Texto
+    //   nodoElemento.appendChild(nodoTexto)// ato el nodo texto al elemento html
+    //   document.getElementById("agregarAlCarrito").appendChild(nodoElemento)// hago aparecer el producto que agrego en pantalla
+    // }  
     
     localStorage.setItem('elCarrito', arrayCarrito)
 }
   //control, si ya existe en el carrito
 function existeEnCarrito(productoCodigo){
-  console.log("existe en carrito" + productoCodigo)
   if(arrayCarrito.length == 0){
+    console.log("primer clic" + productoCodigo)
     return existe = false
-    console.log("if de f existe" + productoCodigo)
+    
   }else{
     console.log("else de existe en carrito")
-    for(let i = 0; i>arrayCarrito.length;i++){
+    for(let i = 0; i>=arrayCarrito.length;i++){//no lo recorre, no se porque
       console.log ("for de existeEnCarrito"+arrayCarrito[i].codigo)
-      if(productoCodigo == arrayCarrito[i]){
+      if(productoCodigo == arrayCarrito[i].codigo){
+        console.log("segundo clic" + productoCodigo + arrayCarrito[i].cantidad)
         return existe = true
       }
-      return existe = false
     }
   }
 }
@@ -46,4 +54,12 @@ function total(){
     total += arrayCarrito[i].getMonto()
   }
   return total
+}
+function eliminarCarrito(){
+  var caja = document.getElementById('agregarAlCarrito');
+  if(caja !== null){
+      while (caja.hasChildNodes()){
+          caja.removeChild(div.lastChild);
+      }
+  }
 }

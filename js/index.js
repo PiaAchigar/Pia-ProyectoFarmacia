@@ -6,24 +6,27 @@ let btnComprarArray = document.querySelectorAll('.productoAlCarrito') // creo un
 //document.getElementById("productoAlCarrito").addEventListener("click",  agregar)
 btnComprarArray.forEach(button => {  //recorrre el array para obtener cada uno de los botones y asignarle el evento on click y la funcion agregar
   button.addEventListener('click', function(event) {
-      agregar(event.currentTarget.value)//le paso el elemento cliqueado (string)
-      console.log("forEach..."+event.currentTarget.value)//imprime el numero perfectamente
-  } )
-  
+      agregar(event.target.value)
 })
+})
+document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
+
+
+
+
+
+
+
+
+
+
+
+
 
 //codigo util
 // a = document.getElementById("algunID");
 // a.addEventListener("mouseover", (event) => {event.target.setAttribute("style", "border-color: red;");});
 // a.addEventListener("mouseout", (event) => {event.target.setAttribute("style", "border: 1px solid rgba(0, 0, 0, 0.8);");});
-
-
-
-
-
-
-
-
 	// When the user scrolls the page, execute myFunction
   window.onscroll = function () { myFunction() };
 
