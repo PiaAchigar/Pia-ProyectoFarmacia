@@ -1,12 +1,12 @@
 let arrayCarrito = []
-let btnComprarArray = document.querySelectorAll('.productoAlCarrito') // creo un array de los botones que tienen la clase productoAlCarrito
+let btnComprarArray = document.querySelectorAll('.productoAlCarrito') // creo un array ( NodeList) de los botones que tienen la clase productoAlCarrito
 // window.onload = function(){
-//   cargaProductos()
+//   cargaProductos()// hacerlo con un template y fragmento
 // }
 //document.getElementById("productoAlCarrito").addEventListener("click",  agregar)
 btnComprarArray.forEach(button => {  //recorrre el array para obtener cada uno de los botones y asignarle el evento on click y la funcion agregar
   button.addEventListener('click', function(event) {
-      agregar(event.target.value)
+      agregar(event.currentTarget.value)// event.target.value me trae undefined, no se porque
 })
 })
 document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
@@ -31,7 +31,7 @@ document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
   window.onscroll = function () { myFunction() };
 
   // Get the header
-  var header = document.getElementById("myHeader");
+  var header = document.getElementById("myHeader");// devuelve una coleccion HTML
 
   // Get the offset position of the navbar
   var sticky = header.offsetTop;

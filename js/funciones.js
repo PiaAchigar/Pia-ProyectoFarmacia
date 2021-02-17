@@ -1,4 +1,5 @@
 function agregar(productoClicCod) {
+  console.log("1er consol..."+productoClicCod)
     if(!existeEnCarrito(productoClicCod)){//entra si aun no hizo click nunca en ese producto
     let productoItem = new Item(productoClicCod, 1)
     arrayCarrito.push(productoItem)//me guarda los productos que va cliqueando
@@ -16,7 +17,7 @@ function agregar(productoClicCod) {
     cart.innerHTML = ''//Seteo su html ''
     
     arrayCarrito.forEach(function(producto) {//hago un forEach en lugar del for porque es un array y es mucho mas comodo
-        html += `<p style="color:green">${producto.cantidad} ${producto.nombre}</p>` //l voy sumando a la variable html un string que luego sera un tag de html
+        html += `<p style="color:green">${producto.cantidad} ${producto.nombre}</p>` //lo voy sumando a la variable html un string que luego sera un tag de html
         cart.innerHTML = html //aqui se convierte en un tag de html
     })
     // for(let k =0 ; k<arrayCarrito.length; k++){
@@ -56,10 +57,11 @@ function total(){
   return total
 }
 function eliminarCarrito(){
-  var caja = document.getElementById('agregarAlCarrito');
-  if(caja !== null){
-      while (caja.hasChildNodes()){
-          caja.removeChild(div.lastChild);
-      }
-  }
+  arrayCarrito = []
+  // var caja = document.getElementById('agregarAlCarrito');      //no funciona por que estan agregados con innerHTML
+  // if(caja.contains !== null){                    
+  //     while (caja.hasChildNodes()){
+  //         caja.removeChild(caja.lastElementChild);
+  //     }
+  // }
 }
