@@ -1,55 +1,47 @@
 function agregar(productoClicCod) {
-  console.log("1er consol..."+productoClicCod)
-    if(!existeEnCarrito(productoClicCod)){//entra si aun no hizo click nunca en ese producto
-    let productoItem = new Item(productoClicCod, 1)
-    arrayCarrito.push(productoItem)//me guarda los productos que va cliqueando
-    }else{//entra si el usu ya habia cliqueado antes el producto
+    if(!existeEnCarrito(productoClicCod)){//1er clic
+      let productoItem = new Item(productoClicCod, 1)
+      arrayCarrito.push(productoItem)
+    }else{// 2do o mas clics
       for(let i = 0; i<arrayCarrito.length ; i++){
         if(arrayCarrito[i].codigo == productoClicCod){
+        let idNodoEliminar = arrayCarrito[i].nombre + "_" + arrayCarrito[i].codigo + "_"+ arrayCarrito[i].cantidad
         arrayCarrito[i].cantidad+=1
-      //let p = document.getElementBytagName()
-      //tengo q borrar los nodos repetidos
+        let nodoPadreEliminar = document.getElementById("agregarAlCarrito")
+        let nodoAEliminar = document.getElementById(idNodoEliminar)
+        nodoPadreEliminar.removeChild(nodoAEliminar)// sigue apareciendo el nodo en el Modal
+       // nodoPadreEliminar.parentElement.removeChild(nodoAEliminar);// no se cual es correcto
+          }
+        }
       }
+      for(let k =0 ; k<arrayCarrito.length; k++){
+        console.log(arrayCarrito[k].cantidad + "..."+ arrayCarrito[k].codigo)
+        let nodoTexto = ""
+        let id = arrayCarrito[k].nombre + "_" + arrayCarrito[k].codigo + "_"+ arrayCarrito[k].cantidad
+        let nodoElemento = document.createElement("p")
+        nodoElemento.setAttribute("style", "color:green")
+        nodoElemento.setAttribute("id", id )
+        nodoTexto = document.createTextNode(arrayCarrito[k].cantidad + " "+ arrayCarrito[k].nombre + " " + "$"+arrayCarrito[k].getMonto()) //me devuelve un NaN, no me dio tiempo de mirarlo mejor
+        nodoElemento.appendChild(nodoTexto)
+        document.getElementById("agregarAlCarrito").appendChild(nodoElemento)
     }
-    }
-    let html = '' //Seteo un string llamado html (puede ser el nombre que sea)
-    let cart = document.getElementById("agregarAlCarrito")//Llamo al elemento donde quieres mostrar los productos
-    cart.innerHTML = ''//Seteo su html ''
-    
-    arrayCarrito.forEach(function(producto) {//hago un forEach en lugar del for porque es un array y es mucho mas comodo
-        html += `<p style="color:green">${producto.cantidad} ${producto.nombre}</p>` //lo voy sumando a la variable html un string que luego sera un tag de html
-        cart.innerHTML = html //aqui se convierte en un tag de html
-    })
-    // for(let k =0 ; k<arrayCarrito.length; k++){
-    //   let nodoTexto = ""
-    //   let nodoElemento = document.createElement("p") //creo el elemento que voy a atar
-    //   nodoElemento.setAttribute("style", "color:green")// le ato un atto a mi elemento
-    //   nodoTexto = document.createTextNode(arrayCarrito[k].cantidad + " "+ arrayCarrito[k].nombre)// creo un nodo tipo Texto
-    //   nodoElemento.appendChild(nodoTexto)// ato el nodo texto al elemento html
-    //   document.getElementById("agregarAlCarrito").appendChild(nodoElemento)// hago aparecer el producto que agrego en pantalla
-    // }  
-    
-    localStorage.setItem('elCarrito', arrayCarrito)
-}
-  //control, si ya existe en el carrito
+    localStorage.setItem('elCarrito', arrayCarrito)// quiero hacer una f(x) que recupere el carrito si se cerro el navegador
+  }
+  
 function existeEnCarrito(productoCodigo){
+  console.log(arrayCarrito + "mi array")
   if(arrayCarrito.length == 0){
-    console.log("primer clic" + productoCodigo)
     return existe = false
-    
   }else{
-    console.log("else de existe en carrito")
-    for(let i = 0; i>=arrayCarrito.length;i++){//no lo recorre, no se porque
-      console.log ("for de existeEnCarrito"+arrayCarrito[i].codigo)
+    for(let i = 0; i<arrayCarrito.length;i++){
       if(productoCodigo == arrayCarrito[i].codigo){
-        console.log("segundo clic" + productoCodigo + arrayCarrito[i].cantidad)
         return existe = true
       }
     }
   }
 }
 
-function total(){
+function total(){//no me dio tiempo de usarla porque pedi mucho tiempo intentando que funcione la insercion y eliminacion de nodos :(
   let total = 0
   for(let i = arrayCarrito.length; i>=0 ; i--){
     total += arrayCarrito[i].getMonto()
@@ -58,10 +50,9 @@ function total(){
 }
 function eliminarCarrito(){
   arrayCarrito = []
-  // var caja = document.getElementById('agregarAlCarrito');      //no funciona por que estan agregados con innerHTML
-  // if(caja.contains !== null){                    
-  //     while (caja.hasChildNodes()){
-  //         caja.removeChild(caja.lastElementChild);
-  //     }
-  // }
+  let caja = document.getElementById('agregarAlCarrito');
+    while (caja.firstChild){
+          caja.removeChild(caja.firstChild);
+      }
+  localStorage.clear()
 }
