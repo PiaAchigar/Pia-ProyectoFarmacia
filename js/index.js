@@ -1,10 +1,6 @@
 let arrayCarrito = []
 let btnComprarArray = document.querySelectorAll('.productoAlCarrito')
 
-localStorage.setItem('elCarrito', arrayCarrito)
-// window.onload = function(){
-//   cargaProductos()// hacerlo con un template y fragmento
-// }
 btnComprarArray.forEach(button => {
   button.addEventListener('click', function(event) {
       agregar(event.currentTarget.value)

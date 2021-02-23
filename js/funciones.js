@@ -2,18 +2,8 @@ function agregar(productoClicCod) {
     if(!existeEnCarrito(productoClicCod)){//1er clic
       let productoItem = new Item(productoClicCod, 1)
       arrayCarrito.push(productoItem)
-    }else{// 2do o mas clics
-      for(let i = 0; i<arrayCarrito.length ; i++){
-        if(arrayCarrito[i].codigo == productoClicCod){
-        let idNodoEliminar = arrayCarrito[i].nombre + "_" + arrayCarrito[i].codigo + "_"+ arrayCarrito[i].cantidad
-        arrayCarrito[i].cantidad+=1
-        let nodoPadreEliminar = document.getElementById("agregarAlCarrito")
-        let nodoAEliminar = document.getElementById(idNodoEliminar)
-        nodoPadreEliminar.removeChild(nodoAEliminar)// sigue apareciendo el nodo en el Modal
-       // nodoPadreEliminar.parentElement.removeChild(nodoAEliminar);// no se cual es correcto
-          }
-        }
-      }
+    }
+      document.getElementById("agregarAlCarrito").innerHTML = ""
       for(let k =0 ; k<arrayCarrito.length; k++){
         console.log(arrayCarrito[k].cantidad + "..."+ arrayCarrito[k].codigo)
         let nodoTexto = ""
@@ -35,6 +25,7 @@ function existeEnCarrito(productoCodigo){
   }else{
     for(let i = 0; i<arrayCarrito.length;i++){
       if(productoCodigo == arrayCarrito[i].codigo){
+        arrayCarrito[i].cantidad+=1
         return existe = true
       }
     }
