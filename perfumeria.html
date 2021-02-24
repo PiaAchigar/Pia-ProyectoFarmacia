@@ -23,7 +23,9 @@
 		<i class="fa fa-whatsapp my-float"></i>
 	</a>
 	<div class="titulo">
-		<img src="multimedia/HunkoLogo.jpg" class="titulo">
+		<a href="index.html" class="navbar-brand">
+			<img src="multimedia/HunkoLogo.jpg" class="titulo">
+		</a>
 	</div>
 
 	<header class="container-fluid" id="myHeader">
@@ -109,6 +111,11 @@
 							<a class="dropdown-item" href="nosotros.html#peticos">Principios Éticos</a>
 						</div>
 					</li>
+					<li>
+						<a href="#" class="navbar-brand">
+							<img class="imgMenu" src="multimedia/carrito.png" width="50px" alt="LogoHunkoFarmacia">
+						</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -123,17 +130,25 @@
 					<img src="multimedia/goodGirlCH.jpg" alt="Good Girl">
 					<p>Carolina Herrera</p>
 					<p>Good Girl</p>
-					<p>100 ml</p>
-					<p>$8800</p>
+					<select class="w1" name="tamanio" id="tamanio">
+						<option value="100ml">100ml</option>
+						<option value="80ml">80ml</option>
+						<option value="50ml">50ml</option>
+					</select>
+					<p class="price">$8800</p>
 					<p value="7798656860"><button class="productoAlCarrito hoverButton" value="7798656860" data-toggle="modal" data-target="#exampleModal" >Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 					<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 					<p>Ralph Lauren</p>
 					<p>Ralph</p>
-					<p>80 ml</p>
+					<select class="w1" name="tamanio" id="tamanio">
+						<option value="100ml">100ml</option>
+						<option value="80ml">80ml</option>
+						<option value="50ml">50ml</option>
+					</select>
 					<p class="price">$6500</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656861"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656861"  data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
@@ -142,7 +157,7 @@
 					<p>Black XS</p>
 					<p>80 ml</p>
 					<p class="price">$8900</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656862"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656862"  data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-3 col-xl-3 card">
@@ -151,7 +166,7 @@
 					<p>Idole</p>
 					<p>75 ml</p>
 					<p class="price">$7800</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656863"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656863"  data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
@@ -160,7 +175,7 @@
 					<p>Opium Black</p>
 					<p>100 ml</p>
 					<p class="price">$7800</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656864"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656864" data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
@@ -169,7 +184,7 @@
 					<p>Rouge</p>
 					<p>80 ml</p>
 					<p class="price">$7900</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656865"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656865" data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
@@ -178,7 +193,7 @@
 					<p>Anais Anais</p>
 					<p>80 ml</p>
 					<p class="price">$6800</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656866"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656866" data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
@@ -187,7 +202,7 @@
 					<p>Eternity</p>
 					<p>75 ml</p>
 					<p class="price">$8000</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656867"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656867" data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
@@ -196,7 +211,7 @@
 					<p>Tommy Girl</p>
 					<p>75 ml</p>
 					<p class="price">$7500</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656868"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656868" data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
@@ -205,7 +220,7 @@
 					<p>L´interdit</p>
 					<p>80 ml</p>
 					<p class="price">$9800</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656869"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656869" data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
@@ -214,7 +229,7 @@
 					<p>Jador</p>
 					<p>100 ml</p>
 					<p class="price">$9900</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656870"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656870" data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="col-12 col-md-4 col-xl-3 card">
@@ -223,7 +238,7 @@
 					<p>L´eau Kenzo</p>
 					<p>75 ml</p>
 					<p class="price">$7950</p>
-					<p><button class="hoverButton productoAlCarrito" value="7798656871"  id="productoAlCarrito" data-toggle="modal" data-target="#exampleModal"
+					<p><button class="hoverButton productoAlCarrito" value="7798656871" data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 				</div>
 				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

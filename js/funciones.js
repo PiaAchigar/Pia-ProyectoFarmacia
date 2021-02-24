@@ -3,11 +3,13 @@ function agregar(productoClicCod) {
       let productoItem = new Item(productoClicCod, 1)
       arrayCarrito.push(productoItem)
     }
-      document.getElementById("agregarAlCarrito").innerHTML = ""
+    $(".agregarAlCarrito").text("")
+    //document.getElementById("agregarAlCarrito").innerHTML = ""
       for(let k =0 ; k<arrayCarrito.length; k++){
-        console.log(arrayCarrito[k].cantidad + "..."+ arrayCarrito[k].codigo)
-        let nodoTexto = ""
         let id = arrayCarrito[k].nombre + "_" + arrayCarrito[k].codigo + "_"+ arrayCarrito[k].cantidad
+       // $(".agregarAlCarrito").append('<p style = "color:green;" id = ' + id + '></p>')
+       // $(id).text(arrayCarrito[k].cantidad + " "+ arrayCarrito[k].nombre + " $"+ arrayCarrito[k].getMonto())
+        let nodoTexto = ""
         let nodoElemento = document.createElement("p")
         nodoElemento.setAttribute("style", "color:green")
         nodoElemento.setAttribute("id", id )

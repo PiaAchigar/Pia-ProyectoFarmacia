@@ -1,22 +1,15 @@
 let arrayCarrito = []
-let btnComprarArray = document.querySelectorAll('.productoAlCarrito')
+$(document).ready(function(){
+  $('.productoAlCarrito').click (agregar)
+//let btnComprarArray = document.querySelectorAll('.productoAlCarrito')
+// btnComprarArray.forEach(button => {
+//   button.addEventListener('click', function(event) {
+//       agregar(event.currentTarget.value)
+// })
+// })
 
-btnComprarArray.forEach(button => {
-  button.addEventListener('click', function(event) {
-      agregar(event.currentTarget.value)
-})
-})
-document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
-
-
-
-
-
-
-
-
-
-
+$('#eliminar').click(eliminarCarrito)
+//document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
 
 
 
@@ -36,3 +29,4 @@ document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
       header.classList.remove("sticky");
     }
   }
+})
