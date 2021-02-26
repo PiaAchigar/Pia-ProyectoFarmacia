@@ -1,17 +1,20 @@
 let arrayCarrito = []
-$(document).ready(function(){
-  $('.productoAlCarrito').click (agregar)
-//let btnComprarArray = document.querySelectorAll('.productoAlCarrito')
-// btnComprarArray.forEach(button => {
-//   button.addEventListener('click', function(event) {
-//       agregar(event.currentTarget.value)
-// })
-// })
+//$(document).ready(function(){------------- Todo lo q tiene rayita es lo q quiero q funcione pero no anda
+ // $('.productoAlCarrito').click (agregar)-------------
+//$('#eliminar').click(eliminarCarrito) -----
+//------------------------
+let btnComprarArray = document.querySelectorAll('.productoAlCarrito') // creo un array ( NodeList) de los botones que tienen la clase productoAlCarrito
 
-$('#eliminar').click(eliminarCarrito)
-//document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
+localStorage.setItem('elCarrito', arrayCarrito)
+btnComprarArray.forEach(button => {  //recorrre el array para obtener cada uno de los botones y asignarle el evento on click y la funcion agregar
+  button.addEventListener('click', function(event) {
+      agregar(event.currentTarget.value)// event.target.value me trae undefined, no se porque
+})
+})
+document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
 
 
+//})----------------------
 
   window.onscroll = function () { myFunction() };
 
@@ -29,4 +32,8 @@ $('#eliminar').click(eliminarCarrito)
       header.classList.remove("sticky");
     }
   }
-})
+
+//--------- Lista de Tareas -----
+// - Agregar https://sweetalert2.github.io/
+// - Base de Datos de Clientes, Login
+// - Agregar metodos de pago

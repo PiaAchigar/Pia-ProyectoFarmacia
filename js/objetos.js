@@ -14,3 +14,10 @@ function Item(codigoProd, cant){
   }
   this.getMonto=function(){return this.precioTotal}
 }
+
+function Cliente (nombre,apellido,mail,contrasenia){
+  this.nombre = nombre
+  this.apellido = apellido
+  this.mail= mail
+  this.contrasenia = contrasenia
+}
