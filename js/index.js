@@ -1,9 +1,10 @@
 let arrayCarrito = []
 $(document).ready(function(){
-  // $('.productoAlCarrito').click(agregar)
-  let nodoItem = $('.productoAlCarrito')
-  nodoItem.click(agregar)
-  
+  $('.productoAlCarrito').click (function(e){
+    e.preventDefault();
+    agregar})
+
+    console.log ( $('.productoAlCarrito'))
   $('#eliminar').click(eliminarCarrito)
 
 //let btnComprarArray = document.querySelectorAll('.productoAlCarrito') // creo un array ( NodeList) de los botones que tienen la clase productoAlCarrito
@@ -16,11 +17,11 @@ $(document).ready(function(){
 //})
 //document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
 
-
-
-//en mi carrito quiero que aparezca el modal con evento click
-// .slideToggle() -> Muestra u oculta el elemento según el estado en que esté
-
+$('#notas').click(function(){ // como hago para aplicarselo a todos?
+  $('#notaMostrar').slideToggle(1500, function(){
+    console.log("entro")
+  })
+})
 
 $("#carrito-toggle").click(function() {
     //$("#exampleModal").slideToggle(2000)
@@ -49,7 +50,7 @@ $("#comprar").click(function() {
     timer: 2000
   })
 })
-})//----------------------
+})
 
   window.onscroll = function () { myFunction() };
 

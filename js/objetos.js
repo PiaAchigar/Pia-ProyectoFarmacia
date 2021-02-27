@@ -5,14 +5,13 @@ function Item(codigoProd, cant){
           this.nombre=productosJson[i].nombre
           this.tamanio=productosJson[i].tamanio// hay varios tamaños :( )
           this.precio=productosJson[i].precio
-          this.precioTotal = parseInt(this.precio) * parseInt(this.cantidad)
+          this.precioTotal = parseInt(productosJson[i].precio) * parseInt(cant)
           this.codigo=parseInt(productosJson[i].codigo)
           this.stock=productosJson[i].stock 
           this.cantidad = cant
         break
     }
   }
-  this.getMonto=function(){return this.precioTotal}
 }
 
 function Cliente (nombre,apellido,mail,contrasenia){
