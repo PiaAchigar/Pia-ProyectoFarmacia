@@ -17,6 +17,38 @@ $(document).ready(function(){
 //document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
 
 
+
+//en mi carrito quiero que aparezca el modal con evento click
+// .slideToggle() -> Muestra u oculta el elemento según el estado en que esté
+
+
+$("#carrito-toggle").click(function() {
+    //$("#exampleModal").slideToggle(2000)
+    Swal.fire({
+      position: 'top-end',
+      title: 'Su Carrito',
+      showConfirmButton: true,
+    })
+ })
+
+$("#comprar").click(function() {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Compra realizada con Exito!',
+      showConfirmButton: false,
+      timer: 2000
+    })
+ })
+ $("#eliminar").click(function() {
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Carrito vacio',
+    showConfirmButton: false,
+    timer: 2000
+  })
+})
 })//----------------------
 
   window.onscroll = function () { myFunction() };
