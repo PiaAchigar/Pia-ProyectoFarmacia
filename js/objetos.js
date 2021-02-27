@@ -3,7 +3,7 @@ function Item(codigoProd, cant){
     if(productosJson[i].codigo==codigoProd){
           this.marca = productosJson[i].marca
           this.nombre=productosJson[i].nombre
-          this.tamanio=productosJson[i].tamanio
+          this.tamanio=productosJson[i].tamanio// hay varios tamaños :( )
           this.precio=productosJson[i].precio
           this.precioTotal = parseInt(this.precio) * parseInt(this.cantidad)
           this.codigo=parseInt(productosJson[i].codigo)

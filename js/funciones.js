@@ -1,14 +1,17 @@
 function agregar(productoClicCod) {
+  console.log($(productoClicCod).text())
     if(!existeEnCarrito(productoClicCod)){//1er clic
       let productoItem = new Item(productoClicCod, 1)
       arrayCarrito.push(productoItem)
     }
-   // $(".agregarAlCarrito").text("")-----------------
+   // $(".agregarAlCarrito").text("")
     document.getElementById("agregarAlCarrito").innerHTML = ""
       for(let k =0 ; k<arrayCarrito.length; k++){
         let id = arrayCarrito[k].nombre + "_" + arrayCarrito[k].codigo + "_"+ arrayCarrito[k].cantidad
-       // $(".agregarAlCarrito").append('<p style = "color:green;" id = ' + id + '></p>')--------------
+       //$(".agregarAlCarrito").append('<p style = "color:green;" id = ' + id + '></p>') // no se si esta bien creado mi id en tiempo de ejecucios (dinámico)
        // $(id).text(arrayCarrito[k].cantidad + " "+ arrayCarrito[k].nombre + " $"+ arrayCarrito[k].getMonto())---------------
+        // $(.productoClicCod:selected).val() --- tengo que traerme el checkbox seleccionado y agregarlo al atributo "tamanio"... no se como hacerlo
+        //tengo que asignarsela a arrayCarrito[k].tamanio
         let nodoTexto = ""
         let nodoElemento = document.createElement("p")
         nodoElemento.setAttribute("style", "color:green")
@@ -21,7 +24,6 @@ function agregar(productoClicCod) {
   }
   
 function existeEnCarrito(productoCodigo){
-  console.log(arrayCarrito + "mi array")
   if(arrayCarrito.length == 0){
     return existe = false
   }else{
