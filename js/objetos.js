@@ -5,10 +5,10 @@ function Item(codigoProd, cant){
           this.nombre=productosJson[i].nombre
           this.tamanio=productosJson[i].tamanio// hay varios tamaños :( )
           this.precio=productosJson[i].precio
-          this.precioTotal = parseInt(productosJson[i].precio) * parseInt(cant)
           this.codigo=parseInt(productosJson[i].codigo)
           this.stock=productosJson[i].stock 
           this.cantidad = cant
+          this.precioTotal = parseInt(productosJson[i].precio) * parseInt(this.cantidad)
         break
     }
   }

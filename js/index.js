@@ -2,24 +2,16 @@ let arrayCarrito = []
 $(document).ready(function(){
   $('.productoAlCarrito').click (function(e){
     e.preventDefault();
-    agregar})
-
-    console.log ( $('.productoAlCarrito'))
+    agregar(e.currentTarget.value)
+  })
   $('#eliminar').click(eliminarCarrito)
 
-//let btnComprarArray = document.querySelectorAll('.productoAlCarrito') // creo un array ( NodeList) de los botones que tienen la clase productoAlCarrito
-
-//localStorage.setItem('elCarrito', arrayCarrito)
-//btnComprarArray.forEach(button => {  //recorrre el array para obtener cada uno de los botones y asignarle el evento on click y la funcion agregar
- // button.addEventListener('click', function(event) {
-     // agregar(event.currentTarget.value)// event.target.value me trae undefined, no se porque
-//})
-//})
-//document.getElementById("eliminar").addEventListener("click", eliminarCarrito)
-
-$('#notas').click(function(){ // como hago para aplicarselo a todos?
+$('#notas').click(function(){
   $('#notaMostrar').slideToggle(1500, function(){
-    console.log("entro")
+  })
+})
+$('#notasRL').click(function(){//quiero agregarle a todos los perfumes las Notas, pero no se como simplificarlo
+  $('#notaMostrarRL').slideToggle(1500, function(){
   })
 })
 
