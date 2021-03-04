@@ -21,6 +21,7 @@ $("#carrito-toggle").click(function() {
       position: 'top-end',
       title: 'Su Carrito',
       showConfirmButton: true,
+      
     })
  })
 
