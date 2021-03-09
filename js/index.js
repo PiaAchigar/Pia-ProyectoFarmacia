@@ -106,6 +106,7 @@ $("#comprar").click(function() {
       timer: 2000,
       keydownListenerCapture: true
     })
+    arrayCarrito=[]
     // $.ajax({
     //   url: ""
     //   type: "GET",
