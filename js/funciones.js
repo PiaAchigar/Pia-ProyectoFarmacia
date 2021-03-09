@@ -1,9 +1,9 @@
-function agregar(productoClicCod) {
+function agregar(productoClicCod, prodJson) {
     if(!existeEnCarrito(productoClicCod)){
-      let productoItem = new Item(productoClicCod, 1)
+      let productoItem = new Item(productoClicCod, 1, prodJson)
       arrayCarrito.push(productoItem)
     }
-    $('.agregarAlCarrito').text("")
+    $('.agregarAlCarrito').text("") // es lo mismo que $('.agregarAlCarrito').remove() ??
     for(let k =0 ; k<arrayCarrito.length; k++){
       let id = arrayCarrito[k].codigo
       $(".agregarAlCarrito").append('<p style = "color:green;" id = ' + id + '></p>') 
@@ -26,7 +26,7 @@ function existeEnCarrito(productoCodigo){
 
 function total(){
   let total = 0
-  for(let i = arrayCarrito.length; i>=0 ; i--){
+  for(let i = 0; i<arrayCarrito.length;i++){
     total += arrayCarrito[i].precioTotal
   }
   return total

@@ -1,8 +1,19 @@
 let arrayCarrito = []
 $(document).ready(function(){
   $('.productoAlCarrito').click (function(e){
-    e.preventDefault();
-    agregar(e.currentTarget.value)
+    $.ajax({
+      url: "./js/productos.json", // ? = "parámetro"
+      type: "GET",
+      dataType: "json"
+    })
+    .done(function(resultado){ // (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
+       e.preventDefault();
+        agregar(e.currentTarget.value, resultado.productosJson)
+      })
+      .fail(function (xhr, status, error){// (premisa fail) (si hay falla en el get, se ejecuta ésta) xhr =xml http recuest , o sea la recuest completa de lo que pasó / status= ej:400(sig q no se encontro el cliente) - numero de error/ error = descripcion del error
+        console.log(xhr), console.log(status), console.log(error), console.log(productosJson[0])
+    }) // puedo reemplazar .done y .fail -> .then (function , function)
+   
   })
   $('#eliminar').click(eliminarCarrito)
 
@@ -10,20 +21,81 @@ $('#notas').click(function(){
   $('#notaMostrar').slideToggle(1500, function(){
   })
 })
-$('#notasRL').click(function(){//quiero agregarle a todos los perfumes las Notas, pero no se como simplificarlo
+$('#notasRL').click(function(){//todo: agregarle a todos los perfumes las Notas, pero no se como simplificarlo
   $('#notaMostrarRL').slideToggle(1500, function(){
   })
 })
+$('#notasBX').click(function(){
+  $('#notaMostrarBX').slideToggle(1500, function(){
+  })
+})
+$('#notasI').click(function(){
+  $('#notaMostrarI').slideToggle(1500, function(){
+  })
+})
+$('#notasYO').click(function(){
+  $('#notaMostrarYO').slideToggle(1500, function(){
+  })
+})
+$('#notasNR').click(function(){
+  $('#notaMostrarNR').slideToggle(1500, function(){
+  })
+})
+$('#notasCA').click(function(){
+  $('#notaMostrarCA').slideToggle(1500, function(){
+  })
+})
+$('#notasCE').click(function(){
+  $('#notaMostrarCE').slideToggle(1500, function(){
+  })
+})
+$('#notasTHG').click(function(){
+  $('#notaMostrarTHG').slideToggle(1500, function(){
+  })
+})
+$('#notasGL').click(function(){
+  $('#notaMostrarGL').slideToggle(1500, function(){
+  })
+})
+$('#notasDJ').click(function(){
+  $('#notaMostrarDJ').slideToggle(1500, function(){
+  })
+})
+$('#notasKL').click(function(){
+  $('#notaMostrarKL').slideToggle(1500, function(){
+  })
+})
 
-$("#carrito-toggle").click(function() {
+
+$("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
     //$("#exampleModal").slideToggle(2000)
     Swal.fire({
       position: 'top-end',
       title: 'Su Carrito',
       showConfirmButton: true,
-      
+      showDenyButton: true,
+      denyButtonText: `Eliminar`,
+      keydownListenerCapture: true,
+      text: `Su saldo es ${total()}`
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        //tengo q mandarlo a mercadopago
+      } else if (result.isDenied) {
+        Swal.fire('Carrito Vacio')
+        arrayCarrito = []
+      }
     })
  })
+ function imprimirElArray(){
+   arrayCarrito.forEach(function(i) {
+    i.insertAdjacentHTML(
+      "afterend",
+      `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
+    );
+  });
+  // arrayCarrito.forEach(i=> console.log(i.cantidad + " "+ i.nombre + " $"+ i.precio*i.cantidad))
+ }
 
 $("#comprar").click(function() {
     Swal.fire({
@@ -31,8 +103,14 @@ $("#comprar").click(function() {
       icon: 'success',
       title: 'Compra realizada con Exito!',
       showConfirmButton: false,
-      timer: 2000
+      timer: 2000,
+      keydownListenerCapture: true
     })
+    // $.ajax({
+    //   url: ""
+    //   type: "GET",
+    //   dataType: "json"
+    // })
  })
  $("#eliminar").click(function() {
   Swal.fire({
@@ -40,11 +118,24 @@ $("#comprar").click(function() {
     icon: 'success',
     title: 'Carrito vacio',
     showConfirmButton: false,
-    timer: 2000
+    timer: 2000,
+    keydownListenerCapture: true
   })
+  arrayCarrito = []
 })
 })
-
+ // $('#boton').click(function{
+//   $.ajax[{
+//     //url:,// signo de pregunta (?) = significa "parámetro"
+//     type: "GET",
+//     dataType: "json"
+//   }].done(function(resultado){// (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
+//     console.log(resultado)
+//   })
+//   .fail(function (xhr, status, error){// (premisa fail) (si hay falla en el get, se ejecuta ésta) xhr =xml http recuest , o sea la recuest completa de lo que pasó / status= ej:400(sig q no se encontro el cliente) - numero de error/ error = descripcion del error
+//     console.log(xhr), console.log(status), console.log(error)
+//   }) // puedo reemplazar .done y .fail -> .then (function , function)
+// })
   window.onscroll = function () { myFunction() };
 
   // Get the header

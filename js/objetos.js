@@ -1,4 +1,4 @@
-function Item(codigoProd, cant){
+function Item(codigoProd, cant, productosJson){    
   for(let i = 0; i<productosJson.length ;i++){
     if(productosJson[i].codigo==codigoProd){
           this.marca = productosJson[i].marca
@@ -13,7 +13,7 @@ function Item(codigoProd, cant){
     }
   }
 }
-
+    
 function Cliente (nombre,apellido,mail,contrasenia){
   this.nombre = nombre
   this.apellido = apellido
