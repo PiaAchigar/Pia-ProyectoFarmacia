@@ -1,17 +1,22 @@
-function Item(codigoProd, cant, productosJson){    
-  for(let i = 0; i<productosJson.length ;i++){
-    if(productosJson[i].codigo==codigoProd){
-          this.marca = productosJson[i].marca
-          this.nombre=productosJson[i].nombre
-          this.tamanio=productosJson[i].tamanio// hay varios tamaños :( )
-          this.precio=productosJson[i].precio
-          this.codigo=parseInt(productosJson[i].codigo)
-          this.stock=productosJson[i].stock 
-          this.cantidad = cant
-          this.precioTotal = parseInt(productosJson[i].precio) * parseInt(this.cantidad)
-        break
-    }
+function Item(codigoProd, cant, Json){
+  console.log(Json)
+  for(var clave in Json){
+      if (Json.hasOwnProperty(clave)){
+        Json[clave].forEach(element => {
+          if(element.codigo==codigoProd){
+                    this.marca = element.marca
+                    this.nombre=element.nombre
+                    this.tamanio=element.tamanio// hay varios tamaños :( 
+                    this.precio=element.precio
+                    this.codigo=parseInt(element.codigo)
+                    this.stock=element.stock 
+                    this.cantidad = cant
+                    this.precioTotal = parseInt(element.precio) * parseInt(this.cantidad)
+              }
+        })
+        }
   }
+ 
 }
     
 function Cliente (nombre,apellido,mail,contrasenia){

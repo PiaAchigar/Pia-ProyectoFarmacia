@@ -1,27 +1,61 @@
 let arrayCarrito = []
-$(document).ready(function(){
-  $('.productoAlCarrito').click (function(e){
+
+// if(typeof value!=="number"){ return Promise.reject("eroor el valor....")} (si le paso algo distinto a un numero, entra )//Curso JavaScript: 48. Async - Await - #jonmircha
+
+//$(document).ready(function(){
+$('.productoAlCarrito').click (function(e){
+    e.preventDefault();
+    console.log(e.currentTarget.value)
     $.ajax({
-      url: "./js/productos.json", // ? = "parámetro"
+      url: "./js/productos.json", 
       type: "GET",
       dataType: "json"
     })
     .done(function(resultado){ // (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
-       e.preventDefault();
-        agregar(e.currentTarget.value, resultado.productosJson)
+        agregar(e.currentTarget.value, resultado)
       })
       .fail(function (xhr, status, error){// (premisa fail) (si hay falla en el get, se ejecuta ésta) xhr =xml http recuest , o sea la recuest completa de lo que pasó / status= ej:400(sig q no se encontro el cliente) - numero de error/ error = descripcion del error
         console.log(xhr), console.log(status), console.log(error), console.log(productosJson[0])
-    }) // puedo reemplazar .done y .fail -> .then (function , function)
-   
+    
+    
   })
-  $('#eliminar').click(eliminarCarrito)
+})
+
+  $('.dark-mode-btn').click(function(e){
+    darkMode(e,".dark-mode-btn", "dark-mode")
+  })
+    //scrollTopButton (".scroll-top-btn")
+    
+    mostrarCarrito("#carrito-toggle")
+  //   $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
+  //     //$("#exampleModal").slideToggle(2000)
+  //     Swal.fire({
+  //       position: 'top-end',
+  //       title: 'Su Carrito',
+  //       showConfirmButton: true,
+  //       showDenyButton: true,
+  //       denyButtonText: `Eliminar`,
+  //       keydownListenerCapture: true,
+  //       text: `Su saldo es ${total()}`
+  //     }).then((result) => {
+  //       /* Read more about isConfirmed, isDenied below */
+  //       if (result.isConfirmed) {
+  //         //tengo q mandarlo a mercadopago
+  //       } else if (result.isDenied) {
+  //         Swal.fire('Carrito Vacio')
+  //         arrayCarrito = []
+  //       }
+  //     })
+  //  })
+
+//hacer https://es.stackoverflow.com/questions/91187/evento-onchange-jquery-html/91191
+$('#eliminar').click(eliminarCarrito)
 
 $('#notas').click(function(){
   $('#notaMostrar').slideToggle(1500, function(){
   })
 })
-$('#notasRL').click(function(){//todo: agregarle a todos los perfumes las Notas, pero no se como simplificarlo
+$('#notasRL').click(function(){//todo: agregarle a todos los perfumes las Notas, simplificarlo
   $('#notaMostrarRL').slideToggle(1500, function(){
   })
 })
@@ -65,6 +99,17 @@ $('#notasKL').click(function(){
   $('#notaMostrarKL').slideToggle(1500, function(){
   })
 })
+
+//DARk MODE * Curso JavaScript: 88. DOM: Ejercicios Prácticos | Tema Dark/Light
+//todo: ponerle un evento Clic (icono de luna y sol) con toggle (Curso JavaScript: 65. DOM: Clases CSS - #jonmircha (minuto 8))
+const $html = document.documentElement,
+$body = document.body
+let varDarckColor = getComputedStyle($html).getPropertyValue("--dark-color"), // todo: ir a css y poner el :root{--dark-color:#222  --wight-color:}
+  varLetrasBlancas = getComputedStyle($html).getPropertyValue("--wight-color")
+
+$body.style.backgroundColor = varDarckColor
+$body.style.color = varLetrasBlancas
+
 
 
 $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
@@ -124,7 +169,7 @@ $("#comprar").click(function() {
   })
   arrayCarrito = []
 })
-})
+//})
  // $('#boton').click(function{
 //   $.ajax[{
 //     //url:,// signo de pregunta (?) = significa "parámetro"
@@ -158,3 +203,6 @@ $("#comprar").click(function() {
 // - Agregar https://sweetalert2.github.io/
 // - Base de Datos de Clientes, Login
 // - Agregar metodos de pago
+// ver Curso JavaScript: 101. DOM: Ejercicios Prácticos | Validación de Formularios con HTML5
+//https://www.youtube.com/watch?v=dHqK4Rc6Bbk&t=4745s  25.08 (funcion Expresada)
+//https://www.youtube.com/watch?v=07rCZkwMkB0

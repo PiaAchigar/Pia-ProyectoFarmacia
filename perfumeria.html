@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-dark>
 
 <head>
 	<meta charset="UTF-8">
@@ -17,19 +17,19 @@
 	<link rel="stylesheet" href="css/whatsapp.css">
 </head>
 
-<body>
+<body data-dark>
 	<a href="https://api.whatsapp.com/send?phone=1561333590&text=Hola%21%20En%20que%20te%20podemos%20ayudar?"
 		class="float" target="_blank">
 		<i class="fa fa-whatsapp my-float"></i>
 	</a>
 	<div class="titulo">
 		<a href="index.html" class="navbar-brand">
-			<img src="multimedia/HunkoLogo.jpg" class="titulo">
+			<img src="multimedia/Hunko-SinFondo.png" class="titulo">
 		</a>
 	</div>
 
 	<header class="container-fluid" id="myHeader">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" data-dark>
 			<a href="index.html" class="navbar-brand">
 				<img class="imgMenu" src="multimedia/LogoHunko.png" width="50px" alt="LogoHunkoFarmacia">
 			</a>
@@ -39,7 +39,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse header" id="navbarSupportedContent">
+			<div class="collapse navbar-collapse header" id="navbarSupportedContent" data-dark>
 				<ul class="navbar-nav ml-auto nav-justified ulHunko">
 					<li class="nav-item dropdown subMenuHunko">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -116,6 +116,9 @@
 							<img class="imgMenu" id="carrito-toggle" src="multimedia/carrito.png" width="50px" alt="LogoHunkoFarmacia">
 						</a>
 					</li>
+					<li>
+						<button class="dark-mode-btn" size = 5px>🌙</button>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -126,29 +129,20 @@
 				<h3 id="mujer">Mujer</h3>
 			</div>
 			<div class="row">
-
-				<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
-					<img src="multimedia/goodGirlCH.jpg" alt="Good Girl">
-					<p>Carolina Herrera</p>
-					<p>Good Girl</p>
-					<p>100 ml</p>
-					<p class="price">$8800</p>
-					 <!-- <select class="7798656860" name="tamanio" id="tamanio"> todo: cuando selecciona 1 tamaño, q se setee el precio de dicho tamaño 
-						<option value="100ml">100ml</option>
-						<option value="80ml">80ml</option>
-						<option value="50ml">50ml</option>
-					</select> -->
-					
-					<!-- <select class="7798656860" name="tamanio" id="tamanio"> 
-						<option class="price" value="100ml">$8800</option>
-						<option class="price" value="80ml">$7800</option>
-						<option class="price" value="50ml">$6800</option>
-					</select> -->
-					<p value="7798656860"><button class="productoAlCarrito hoverButton" value="7798656860" data-toggle="modal" data-target="#exampleModal" >Agregar</button></p>
-					<br>
-					<p id="notaMostrar" style="display: none;"> Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro. </p>
-					<p> <label id="notas" class="close" data-dismiss="modal" data-toggle="modal">Notas</label></p> <!--todo: document.querySelectorAll(".btn_notas") asignar evento slideToggle abajo, no en otro lado-->
-				</div>
+					<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
+						<img src="multimedia/goodGirlCH.jpg" alt="Good Girl">
+						<p>Carolina Herrera</p>
+						<p>Good Girl</p>
+						 <select class="7798656860" name="tamanio" id="tamanio"> <!--todo: cuando selecciona 1 tamaño, q se setee el precio de dicho tamaño -->
+							<option value="$8800">100ml</option>
+							<option value="$7800">80ml</option>
+							<option value="$6800">50ml</option>
+						</select>
+						<p value="7798656860"><button class="productoAlCarrito hoverButton" value="7798656860" data-toggle="modal" data-target="#exampleModal" >Agregar</button></p>
+						<br>
+						<p id="notaMostrar" style="display: none;"> Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro. </p>
+						<p> <label id="notas" class="close" data-dismiss="modal" data-toggle="modal">Notas</label></p> <!--todo: document.querySelectorAll(".btn_notas") asignar evento slideToggle abajo, no en otro lado-->
+					</div>
 				<div class="col-12 col-md-3 col-lg-3 col-xl-3 card">
 					<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 					<p>Ralph Lauren</p>
@@ -604,12 +598,12 @@
 				<div>
 					<label for="nombre">Nombre:</label> 
 					<br>
-					<input type="text" name="nombre">
+					<input type="text" name="nombre" title="Nombre solo acepta letras y espacios en blanco" required>
 				</div>
 				<div>
 					<label for="apellido">Apellido:</label>
 					<br>
-					<input type="text" name="apellido">
+					<input type="text" name="apellido" title="Apellido solo acepta letras y espacios en blanco" required>
 				</div>
 				<div>
 					<label for="email">Email:</label>

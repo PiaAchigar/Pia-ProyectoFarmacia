@@ -6,7 +6,8 @@
         "tamanio": 100,
         "precio":8800,
         "codigo":7798656860,
-        "stock": 1
+        "stock": 1,
+        "foto": "multimedia/goodGirlCH.jpg"
         },
         {
         "marca": "Ralph Lauren",
