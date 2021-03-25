@@ -1,28 +1,39 @@
 const d = document;
 
-function agregar(productoClicCod, productosJson) {
-  console.log(productosJson)
-  if(!existeEnCarrito(productoClicCod)){
-    let productoItem = new Item(productoClicCod, 1, productosJson)
+function agregar(productoClicCod, productosJson, tamanio) {
+  //console.log("agregar tamanio:"+ tamanio)
+  if(!existeEnCarrito(productoClicCod,tamanio)){//todo: corroborar el tamaño tb
+    let productoItem = new Item(productoClicCod,1,tamanio,productosJson)
     console.log(productoItem)
     arrayCarrito.push(productoItem)
   }
   $('.agregarAlCarrito').text("")
   for(let k =0 ; k<arrayCarrito.length; k++){
-    let id = arrayCarrito[k].codigo
+    console.log(arrayCarrito[k].codigo + " "+arrayCarrito[k].tamanio + " k:"+ k)
+    let id = arrayCarrito[k].codigo + arrayCarrito[k].tamanio
     $(".agregarAlCarrito").append('<p style = "color:green;" id = ' + id + '></p>') 
-    $("#" + id).text(arrayCarrito[k].cantidad + " "+ arrayCarrito[k].nombre + " $"+ arrayCarrito[k].precio*arrayCarrito[k].cantidad)
+    $("#" + id).text(arrayCarrito[k].cantidad + "  "+ arrayCarrito[k].nombre+"  "+ " x "+ arrayCarrito[k].tamanio+"ml "+" $"+ arrayCarrito[k].precio*arrayCarrito[k].cantidad)
   }
   localStorage.setItem('elCarrito', JSON.stringify(arrayCarrito))// quiero hacer una f(x) que recupere el carrito si se cerro el navegador/ para recuperarlo tengo que hacer JSON.parse(arrayCarrito)
 }
-function existeEnCarrito(productoCodigo){
-  if(arrayCarrito.length == 0){
+function existeEnCarrito(productoCodigo, tamanio){
+  //const existe = true
+  if(arrayCarrito.length === 0){
+    console.log(arrayCarrito.length +"entro al primer if")
+    
     return existe = false
+    
   }else{
     for(let i = 0; i<arrayCarrito.length;i++){
-      if(productoCodigo == arrayCarrito[i].codigo){
+      console.log("entro"+ "i:"+ i + " "+ arrayCarrito[i].tamanio + " el tamaño q mando :"+ tamanio + "codigo:"+arrayCarrito[i].codigo+"cod q entra:"+ productoCodigo)
+      if((tamanio == arrayCarrito[i].tamanio) && (productoCodigo == arrayCarrito[i].codigo)){
+        
         arrayCarrito[i].cantidad+=1
-        return existe = true
+        existe = true
+        return existe
+      }else{
+        existe = false
+        return existe
       }
     }
   }

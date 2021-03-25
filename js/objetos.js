@@ -1,12 +1,13 @@
-function Item(codigoProd, cant, Json){
-  console.log(Json)
+function Item(codigoProd, cant, tamanio,Json){
+  //console.log(Json)
   for(var clave in Json){
       if (Json.hasOwnProperty(clave)){
         Json[clave].forEach(element => {
-          if(element.codigo==codigoProd){
+          //console.log("obj:"+ element.tamanio + tamanio )
+          if(element.codigo==codigoProd && element.tamanio == tamanio){
                     this.marca = element.marca
                     this.nombre=element.nombre
-                    this.tamanio=element.tamanio// hay varios tamaños :( 
+                    this.tamanio=element.tamanio
                     this.precio=element.precio
                     this.codigo=parseInt(element.codigo)
                     this.stock=element.stock 

@@ -133,12 +133,14 @@
 						<img src="multimedia/goodGirlCH.jpg" alt="Good Girl">
 						<p>Carolina Herrera</p>
 						<p>Good Girl</p>
-						 <select class="7798656860" name="tamanio" id="tamanio"> <!--todo: cuando selecciona 1 tamaño, q se setee el precio de dicho tamaño -->
-							<option value="$8800">100ml</option>
-							<option value="$7800">80ml</option>
-							<option value="$6800">50ml</option>
+						<br>
+						 <select class="tamanio" name="tamanio" > <!--todo: cuando selecciona 1 tamaño, q se setee el precio de dicho tamaño -->
+								<option  value="100">100ml</option>
+								<option  value="80">80ml</option>
+								<option  value="50">50ml</option>
 						</select>
-						<p value="7798656860"><button class="productoAlCarrito hoverButton" value="7798656860" data-toggle="modal" data-target="#exampleModal" >Agregar</button></p>
+						<br>
+						<p><button class="productoAlCarrito hoverButton" value="7798656860" data-toggle="modal" data-target="#exampleModal" >Agregar</button></p>
 						<br>
 						<p id="notaMostrar" style="display: none;"> Notas de Salida son almendra, café, bergamota y limón. Notas de Corazón son nardos, jazmín sambac (sampaguita), raíz de lirio, flor de azahar del naranjo y rosa de Bulgaria (rosa Damascena de Bulgaria).Notas de Fondo son haba tonka, cacao, vainilla, praliné, sándalo, ámbar, almizcle, madera de cachemira, pachulí, canela y cedro. </p>
 						<p> <label id="notas" class="close" data-dismiss="modal" data-toggle="modal">Notas</label></p> <!--todo: document.querySelectorAll(".btn_notas") asignar evento slideToggle abajo, no en otro lado-->
@@ -147,13 +149,13 @@
 					<img src="multimedia/ralphLaurenEDTMujer.jpg" alt="">
 					<p>Ralph Lauren</p>
 					<p>Ralph</p>
-					<p>100ml</p>
-					<!-- <select class="7798656861" name="tamanio" id="tamanio">
-						<option value="100ml">100ml</option>
-						<option value="80ml">80ml</option>
-						<option value="50ml">50ml</option>
-					</select> -->
-					<p class="price">$6500</p>
+					<select class="7798656860" name="tamanio"> <!--todo: cuando selecciona 1 tamaño, q se setee el precio de dicho tamaño -->
+						<optgroup label="Seleccione el tamaño" >
+							<option class="tamanio" value="80" selected>80ml</option>
+							<option  class="tamanio" value="50">50ml</option>
+						</optgroup>
+					</select>
+					<br>
 					<p><button class="hoverButton productoAlCarrito" value="7798656861"  data-toggle="modal" data-target="#exampleModal"
 						>Agregar</button></p>
 						<p id="notaMostrarRL" style="display: none;"> Notas de Salida son osmanto japonés (olivo oloroso japonés), hojas del manzano y mandarina italiana; las Notas de Corazón son magnolia, boronia parda y fresia amarilla; las Notas de Fondo son almizcle y iris blanco.</p>

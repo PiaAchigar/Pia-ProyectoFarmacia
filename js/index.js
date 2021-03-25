@@ -3,16 +3,34 @@ let arrayCarrito = []
 // if(typeof value!=="number"){ return Promise.reject("eroor el valor....")} (si le paso algo distinto a un numero, entra )//Curso JavaScript: 48. Async - Await - #jonmircha
 
 //$(document).ready(function(){
-$('.productoAlCarrito').click (function(e){
-    e.preventDefault();
-    console.log(e.currentTarget.value)
+$('.productoAlCarrito').click (function(el){
+    el.preventDefault();
+    //console.log(e.currentTarget.value)
     $.ajax({
       url: "./js/productos.json", 
       type: "GET",
       dataType: "json"
     })
     .done(function(resultado){ // (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
-        agregar(e.currentTarget.value, resultado)
+      const btnSeleccionado = document.querySelectorAll('.tamanio')
+      btnSeleccionado.forEach((e)=>{
+        e.addEventListener('change',(event)=>{
+          console.log( event.target.value+ "entro event")
+
+            agregar(el.currentTarget.value, resultado,event.target.value)
+        })
+        //const tamanioValue = $(".tamanio option:selected" ).text();
+        
+        //$('.tamanio').on('change', function(este) {
+          
+          //console.log("este es el seleccionado:"+ this.value + este.text())
+         //const tamanioValue = $("#tamanio option:selected" ).text();
+        //console.log("esto es el tamanioValue:"+tamanioValue)
+         
+      // })  
+      })
+      //const tamanioTexto = $("#tamanio option:selected" ).text();
+      //const t = tamanioTexto.replace('ml','')
       })
       .fail(function (xhr, status, error){// (premisa fail) (si hay falla en el get, se ejecuta ésta) xhr =xml http recuest , o sea la recuest completa de lo que pasó / status= ej:400(sig q no se encontro el cliente) - numero de error/ error = descripcion del error
         console.log(xhr), console.log(status), console.log(error), console.log(productosJson[0])
@@ -32,6 +50,7 @@ $('.productoAlCarrito').click (function(e){
   //     Swal.fire({
   //       position: 'top-end',
   //       title: 'Su Carrito',
+  //       width: 50%, //box-sizing: border-box
   //       showConfirmButton: true,
   //       showDenyButton: true,
   //       denyButtonText: `Eliminar`,
@@ -50,6 +69,10 @@ $('.productoAlCarrito').click (function(e){
 
 //hacer https://es.stackoverflow.com/questions/91187/evento-onchange-jquery-html/91191
 $('#eliminar').click(eliminarCarrito)
+
+
+
+
 
 $('#notas').click(function(){
   $('#notaMostrar').slideToggle(1500, function(){

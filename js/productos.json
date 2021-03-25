@@ -9,6 +9,20 @@
         "stock": 1,
         "foto": "multimedia/goodGirlCH.jpg"
         },
+        {"marca": "Carolina Herrera",
+          "nombre": "Good-Girl",
+          "tamanio": 80,
+          "precio":7800,
+          "codigo":7798656860,
+          "stock": 1,
+          "foto": "multimedia/goodGirlCH.jpg"},
+        {"marca": "Carolina Herrera",
+          "nombre": "Good-Girl",
+          "tamanio": 50,
+          "precio":6800,
+          "codigo":7798656860,
+          "stock": 1,
+          "foto": "multimedia/goodGirlCH.jpg"},
         {
         "marca": "Ralph Lauren",
         "nombre": "Ralph",
@@ -18,6 +32,14 @@
         "stock": 1
         },
         {
+          "marca": "Ralph Lauren",
+          "nombre": "Ralph",
+          "tamanio": 50,
+          "precio":5500,
+          "codigo":7798656861,
+          "stock": 1
+          },
+        {
         "marca": "Paco Rabanne",
         "nombre": "Black XS",
         "tamanio": 80,
@@ -25,6 +47,14 @@
         "codigo":7798656862,
         "stock": 1
         },
+        {
+          "marca": "Paco Rabanne",
+          "nombre": "Black XS",
+          "tamanio": 50,
+          "precio":7980,
+          "codigo":7798656862,
+          "stock": 1
+          },
         {
         "marca": "Lancome",
         "nombre": "Idole",
