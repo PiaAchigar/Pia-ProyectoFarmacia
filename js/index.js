@@ -23,8 +23,7 @@ $(document).ready(function(){ // $(windows).load(function (){para todo lo q quie
       res.productosJson.forEach((obj)=>{
         $(`#notas${obj.nombre}`).click(function(){ //me lo traigo x id = notas-Good-Girl TODO!!!!
       $(`#mostrarNotas${obj.nombre}`).slideToggle(1500, function(){
-        const n = d.getElementById(`#mostrarNotas${obj.nombre}`)
-        n.setAttribute("style","display: block;")
+        console.log("hola "+obj.nombre)
       })
       })
       
@@ -72,67 +71,6 @@ $(document).ready(function(){ // $(windows).load(function (){para todo lo q quie
 
 //hacer https://es.stackoverflow.com/questions/91187/evento-onchange-jquery-html/91191
 $('#eliminar').click(eliminarCarrito)
-
-
-
-
-
-
-$('#notasRL').click(function(){//todo: agregarle a todos los perfumes las Notas, simplificarlo
-  $('#notaMostrarRL').slideToggle(1500, function(){
-  })
-})
-$('#notasBX').click(function(){
-  $('#notaMostrarBX').slideToggle(1500, function(){
-  })
-})
-$('#notasI').click(function(){
-  $('#notaMostrarI').slideToggle(1500, function(){
-  })
-})
-$('#notasYO').click(function(){
-  $('#notaMostrarYO').slideToggle(1500, function(){
-  })
-})
-$('#notasNR').click(function(){
-  $('#notaMostrarNR').slideToggle(1500, function(){
-  })
-})
-$('#notasCA').click(function(){
-  $('#notaMostrarCA').slideToggle(1500, function(){
-  })
-})
-$('#notasCE').click(function(){
-  $('#notaMostrarCE').slideToggle(1500, function(){
-  })
-})
-$('#notasTHG').click(function(){
-  $('#notaMostrarTHG').slideToggle(1500, function(){
-  })
-})
-$('#notasGL').click(function(){
-  $('#notaMostrarGL').slideToggle(1500, function(){
-  })
-})
-$('#notasDJ').click(function(){
-  $('#notaMostrarDJ').slideToggle(1500, function(){
-  })
-})
-$('#notasKL').click(function(){
-  $('#notaMostrarKL').slideToggle(1500, function(){
-  })
-})
-
-//DARk MODE * Curso JavaScript: 88. DOM: Ejercicios Prácticos | Tema Dark/Light
-//todo: ponerle un evento Clic (icono de luna y sol) con toggle (Curso JavaScript: 65. DOM: Clases CSS - #jonmircha (minuto 8))
-const $html = document.documentElement,
-$body = document.body
-let varDarckColor = getComputedStyle($html).getPropertyValue("--dark-color"), // todo: ir a css y poner el :root{--dark-color:#222  --wight-color:}
-  varLetrasBlancas = getComputedStyle($html).getPropertyValue("--wight-color")
-
-$body.style.backgroundColor = varDarckColor
-$body.style.color = varLetrasBlancas
-
 
 
 $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
