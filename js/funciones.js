@@ -1,4 +1,57 @@
-const d = document;
+const d = document
+function imprimeHtml(Json){
+  
+  const cards = d.querySelector(".cards"),
+        fragmento = d.createDocumentFragment(),
+        figure = d.createElement("figure"),
+        img = d.createElement("img"),
+        p = d.createElement("p"),
+        p2 = d.createElement("p"),
+        divTitulo = d.createElement("div"),
+        h3DivTitulo = d.createElement("h3"),
+        mujer = d.createTextNode("Mujer"),
+        divPerfumes1 = d.createElement("div"),
+        divPerfumes2 = d.createElement("div"),
+        pMarcaPerfu = d.createTextNode("Carolina Herrera"),
+        pNombrePerfu = d.createTextNode("Good Girl"),
+        selectTamanioPerfu = d.createElement("select"),
+        optionDeSelect = d.createElement("option")
+
+        //todo Select...https://stackoverflow.com/questions/16676679/javascript-html-object-htmlselectelement/16676714
+        //https://stackoverflow.com/questions/11418384/how-to-get-current-htmlselectelements-id
+        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedOptions
+
+        //de p al  div2
+        p.appendChild(pMarcaPerfu)
+        p2.appendChild(pNombrePerfu)
+        img.setAttribute("src","multimedia/goodGirlCH.jpg")
+        img.setAttribute("alt","Good Girl")
+        divPerfumes2.classList.add("card")
+        divPerfumes2.appendChild(img)
+        divPerfumes2.appendChild(p)
+        divPerfumes2.appendChild(p2)
+        divPerfumes1.classList.add("row")
+        divPerfumes1.appendChild(divPerfumes2)
+
+        //div1 a divTitulo
+        divTitulo.classList.add("row")
+        h3DivTitulo.appendChild(mujer)
+        divTitulo.appendChild(h3DivTitulo)
+        divTitulo.setAttribute("id","fondoDegradeGris")
+        cards.appendChild(divTitulo)
+        cards.appendChild(divPerfumes1)
+        cards.setAttribute("class", "container")
+       //fragmento.appendChild(cards)
+
+        // if (Json.hasOwnProperty(clave)){
+        //   Json[clave].forEach(element => {
+        //     if(element.nombre){
+
+        //     }
+
+        //   })
+        // }
+}
 
 function agregar(productoClicCod, productosJson, tamanio) {
   //console.log("agregar tamanio:"+ tamanio)
@@ -9,7 +62,7 @@ function agregar(productoClicCod, productosJson, tamanio) {
   }
   $('.agregarAlCarrito').text("")
   for(let k =0 ; k<arrayCarrito.length; k++){
-    console.log(arrayCarrito[k].codigo + " "+arrayCarrito[k].tamanio + " k:"+ k)
+    //console.log(arrayCarrito[k].codigo + " "+arrayCarrito[k].tamanio + " k:"+ k)
     let id = arrayCarrito[k].codigo + arrayCarrito[k].tamanio
     $(".agregarAlCarrito").append('<p style = "color:green;" id = ' + id + '></p>') 
     $("#" + id).text(arrayCarrito[k].cantidad + "  "+ arrayCarrito[k].nombre+"  "+ " x "+ arrayCarrito[k].tamanio+"ml "+" $"+ arrayCarrito[k].precio*arrayCarrito[k].cantidad)
