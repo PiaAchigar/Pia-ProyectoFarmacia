@@ -15,11 +15,11 @@ $(document).ready(function(){ // $(windows).load(function (){para todo lo q quie
         //el.preventDefault();
         //busco el valor del select y se lo mando a agregar
         console.log("si te escucha" + el.currentTarget.value)
-        const prod = d.getElementById(`notas${el.currentTarget.value}`)
-        console.log(prod)
+        const prod = d.getElementById(el.currentTarget.value)
+        console.log(prod.value)
        //agregar()
       })
-      console.log(res.productosJson[0].nombre)
+      d.getElementById("#notaBlack")
       res.productosJson.forEach((obj)=>{
         $(`#notas${obj.nombre}`).click(function(){ //me lo traigo x id = notas-Good-Girl TODO!!!!
       $(`#mostrarNotas${obj.nombre}`).slideToggle(1500, function(){

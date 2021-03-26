@@ -37,7 +37,7 @@ function printHtml(Json){
           for(let k=0;k<e.presentacion.length;k++){
             const optionDeSelect = d.createElement("option")
             optionDeSelect.setAttribute("value",e.presentacion[k].tamanio)
-            optionDeSelect.innerHTML = e.presentacion[k].tamanio + "ml"
+            optionDeSelect.innerHTML =`${e.presentacion[k].tamanio}ml ---> $ ${e.presentacion[k].precio}`
             selectTamanioPerfu.appendChild(optionDeSelect)
           }
           divPerfumes2.appendChild(selectTamanioPerfu)
