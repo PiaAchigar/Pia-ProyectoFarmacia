@@ -1,38 +1,55 @@
 const d = document
-function imprimeHtml(Json){
+function printHtml(Json){
   
   const cards = d.querySelector(".cards"),
         fragmento = d.createDocumentFragment(),
         figure = d.createElement("figure"),
-        img = d.createElement("img"),
-        p = d.createElement("p"),
-        p2 = d.createElement("p"),
+        mujer = d.createTextNode("Mujer"),
         divTitulo = d.createElement("div"),
         h3DivTitulo = d.createElement("h3"),
-        mujer = d.createTextNode("Mujer"),
-        divPerfumes1 = d.createElement("div"),
-        divPerfumes2 = d.createElement("div"),
-        pMarcaPerfu = d.createTextNode("Carolina Herrera"),
-        pNombrePerfu = d.createTextNode("Good Girl"),
-        selectTamanioPerfu = d.createElement("select"),
-        optionDeSelect = d.createElement("option")
+        divPerfumes1 = d.createElement("div")
+        
+        
 
         //todo Select...https://stackoverflow.com/questions/16676679/javascript-html-object-htmlselectelement/16676714
         //https://stackoverflow.com/questions/11418384/how-to-get-current-htmlselectelements-id
         //https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedOptions
+        
+        console.log(Json.productosJson.length)
+        Json.productosJson.forEach((e)=>{
+          const divPerfumes2 = d.createElement("div"), 
+                selectTamanioPerfu = d.createElement("select"),
+                img = d.createElement("img"),
+                p = d.createElement("p"),
+                p2 = d.createElement("p"),
+                pMarcaPerfu = d.createTextNode(e.marca),
+                pNombrePerfu = d.createTextNode(e.nombre)
 
-        //de p al  div2
-        p.appendChild(pMarcaPerfu)
-        p2.appendChild(pNombrePerfu)
-        img.setAttribute("src","multimedia/goodGirlCH.jpg")
-        img.setAttribute("alt","Good Girl")
-        divPerfumes2.classList.add("card")
-        divPerfumes2.appendChild(img)
-        divPerfumes2.appendChild(p)
-        divPerfumes2.appendChild(p2)
-        divPerfumes1.classList.add("row")
-        divPerfumes1.appendChild(divPerfumes2)
-
+          //de p al  div2
+          p.appendChild(pMarcaPerfu)
+          p2.appendChild(pNombrePerfu)
+          img.setAttribute("src",e.foto)
+          img.setAttribute("alt",e.nombre)
+          divPerfumes2.classList.add("card")
+          divPerfumes2.appendChild(img)
+          divPerfumes2.appendChild(p)
+          divPerfumes2.appendChild(p2)
+          divPerfumes1.classList.add("row")//tengo q ponerle mas classes
+          divPerfumes1.appendChild(divPerfumes2)
+          
+          //Selects
+          selectTamanioPerfu.setAttribute("id", e.nombre)
+          console.log("nombre de las presentacio:"+e.nombre)
+          for(let k=0;k<e.presentacion.length;k++){
+            const optionDeSelect = d.createElement("option")
+            console.log("presentacion:"+ e.presentacion[k].tamanio)
+            optionDeSelect.setAttribute("value",e.presentacion[k].tamanio)
+            optionDeSelect.innerHTML = e.presentacion[k].tamanio + "ml"
+            selectTamanioPerfu.appendChild(optionDeSelect)
+          }
+          divPerfumes2.appendChild(selectTamanioPerfu)
+          
+        })             
         //div1 a divTitulo
         divTitulo.classList.add("row")
         h3DivTitulo.appendChild(mujer)
@@ -41,16 +58,7 @@ function imprimeHtml(Json){
         cards.appendChild(divTitulo)
         cards.appendChild(divPerfumes1)
         cards.setAttribute("class", "container")
-       //fragmento.appendChild(cards)
-
-        // if (Json.hasOwnProperty(clave)){
-        //   Json[clave].forEach(element => {
-        //     if(element.nombre){
-
-        //     }
-
-        //   })
-        // }
+      
 }
 
 function agregar(productoClicCod, productosJson, tamanio) {

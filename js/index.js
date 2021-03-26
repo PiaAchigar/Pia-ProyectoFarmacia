@@ -10,15 +10,12 @@ $(document).ready(function(){ // $(windows).load(function (){para todo lo q quie
     type: "GET",
     dataType: "json"
   })
-  .done(function(resultado){ // (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
-      
-    CreateArrayJson(resultado)
-      
-      imprimeHtml(resultado)
+  .done(function(res){ // (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
+      printHtml(res)
   
     //agregar(el.currentTarget.value, resultado,e.target.value)
   
-      //const tamanioValue = $(".tamanio option:selected" ).text();
+      //const tamanioValue = $(".tamanio option:selected" ).text(); // usa insertadjacentHTML
       //$('.tamanio').on('change', function(este) {
        //const tamanioTexto = $("#tamanio option:selected" ).text();
     //const t = tamanioTexto.replace('ml','')
@@ -37,7 +34,7 @@ $('.productoAlCarrito').click (function(el){
   })
     //scrollTopButton (".scroll-top-btn")
     
-    mostrarCarrito("#carrito-toggle")
+    //mostrarCarrito("#carrito-toggle")
   //   $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
   //     //$("#exampleModal").slideToggle(2000)
   //     Swal.fire({
