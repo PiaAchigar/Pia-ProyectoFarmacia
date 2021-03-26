@@ -1,7 +1,6 @@
 const arrayCarrito = []
 const arrayJson = []
 
-
 // if(typeof value!=="number"){ return Promise.reject("eroor el valor....")} (si le paso algo distinto a un numero, entra )//Curso JavaScript: 48. Async - Await - #jonmircha
 
 $(document).ready(function(){ // $(windows).load(function (){para todo lo q quiera q se ejecute despues de cargado img})
@@ -12,9 +11,24 @@ $(document).ready(function(){ // $(windows).load(function (){para todo lo q quie
   })
   .done(function(res){ // (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
       printHtml(res)
-  
-    //agregar(el.currentTarget.value, resultado,e.target.value)
-  
+      $('.productoAlCarrito').click (function(el){
+        //el.preventDefault();
+        //busco el valor del select y se lo mando a agregar
+        console.log("si te escucha" + el.currentTarget.value)
+        const prod = d.getElementById(`notas${el.currentTarget.value}`)
+        console.log(prod)
+       //agregar()
+      })
+      console.log(res.productosJson[0].nombre)
+      res.productosJson.forEach((obj)=>{
+        $(`#notas${obj.nombre}`).click(function(){ //me lo traigo x id = notas-Good-Girl TODO!!!!
+      $(`#mostrarNotas${obj.nombre}`).slideToggle(1500, function(){
+        const n = d.getElementById(`#mostrarNotas${obj.nombre}`)
+        n.setAttribute("style","display: block;")
+      })
+      })
+      
+    })
       //const tamanioValue = $(".tamanio option:selected" ).text(); // usa insertadjacentHTML
       //$('.tamanio').on('change', function(este) {
        //const tamanioTexto = $("#tamanio option:selected" ).text();
@@ -23,17 +37,16 @@ $(document).ready(function(){ // $(windows).load(function (){para todo lo q quie
     .fail(function (xhr, status, error){// (premisa fail) (si hay falla en el get, se ejecuta ésta) xhr =xml http recuest , o sea la recuest completa de lo que pasó / status= ej:400(sig q no se encontro el cliente) - numero de error/ error = descripcion del error
       console.log(xhr), console.log(status), console.log(error), console.log(productosJson[0])
    })
-$('.productoAlCarrito').click (function(el){
-    el.preventDefault();
-    //console.log(e.currentTarget.value)
-   
-})
+
 })
   $('.dark-mode-btn').click(function(e){
     darkMode(e,".dark-mode-btn", "dark-mode")
   })
     //scrollTopButton (".scroll-top-btn")
     
+    
+
+
     //mostrarCarrito("#carrito-toggle")
   //   $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
   //     //$("#exampleModal").slideToggle(2000)
@@ -64,10 +77,7 @@ $('#eliminar').click(eliminarCarrito)
 
 
 
-$('#notas').click(function(){
-  $('#notaMostrar').slideToggle(1500, function(){
-  })
-})
+
 $('#notasRL').click(function(){//todo: agregarle a todos los perfumes las Notas, simplificarlo
   $('#notaMostrarRL').slideToggle(1500, function(){
   })

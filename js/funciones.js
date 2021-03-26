@@ -2,20 +2,15 @@ const d = document
 function printHtml(Json){
   
   const cards = d.querySelector(".cards"),
-        fragmento = d.createDocumentFragment(),
-        figure = d.createElement("figure"),
+        fragmento = d.createDocumentFragment(), //todo
         mujer = d.createTextNode("Mujer"),
         divTitulo = d.createElement("div"),
         h3DivTitulo = d.createElement("h3"),
         divPerfumes1 = d.createElement("div")
         
-        
-
         //todo Select...https://stackoverflow.com/questions/16676679/javascript-html-object-htmlselectelement/16676714
         //https://stackoverflow.com/questions/11418384/how-to-get-current-htmlselectelements-id
         //https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedOptions
-        
-        console.log(Json.productosJson.length)
         Json.productosJson.forEach((e)=>{
           const divPerfumes2 = d.createElement("div"), 
                 selectTamanioPerfu = d.createElement("select"),
@@ -25,31 +20,58 @@ function printHtml(Json){
                 pMarcaPerfu = d.createTextNode(e.marca),
                 pNombrePerfu = d.createTextNode(e.nombre)
 
-          //de p al  div2
+          //de p al div2 (div Hijo)
           p.appendChild(pMarcaPerfu)
           p2.appendChild(pNombrePerfu)
           img.setAttribute("src",e.foto)
           img.setAttribute("alt",e.nombre)
-          divPerfumes2.classList.add("card")
+          divPerfumes2.className ="col-12 col-md-3 col-lg-3 col-xl-3 card"
           divPerfumes2.appendChild(img)
           divPerfumes2.appendChild(p)
           divPerfumes2.appendChild(p2)
-          divPerfumes1.classList.add("row")//tengo q ponerle mas classes
+          divPerfumes1.classList.add("row")
           divPerfumes1.appendChild(divPerfumes2)
           
           //Selects
           selectTamanioPerfu.setAttribute("id", e.nombre)
-          console.log("nombre de las presentacio:"+e.nombre)
           for(let k=0;k<e.presentacion.length;k++){
             const optionDeSelect = d.createElement("option")
-            console.log("presentacion:"+ e.presentacion[k].tamanio)
             optionDeSelect.setAttribute("value",e.presentacion[k].tamanio)
             optionDeSelect.innerHTML = e.presentacion[k].tamanio + "ml"
             selectTamanioPerfu.appendChild(optionDeSelect)
           }
           divPerfumes2.appendChild(selectTamanioPerfu)
-          
-        })             
+        //Btn Agregar
+        const btnAgregar = d.createElement("button"),
+              pBtn = d.createElement("p"),
+              btnTexto = d.createTextNode("Agregar")
+        btnAgregar.setAttribute("id",e.nombre)
+        btnAgregar.setAttribute("value",e.nombre)
+        btnAgregar.setAttribute("data-toggle","modal")
+        btnAgregar.setAttribute("data-target","#exampleModal")
+        btnAgregar.className = "productoAlCarrito hoverButton"
+        btnAgregar.appendChild(btnTexto)
+        pBtn.appendChild(btnAgregar)
+        divPerfumes2.appendChild(pBtn)
+        //Notas 
+        const notas = d.createElement("p"),
+              notaTexto = d.createTextNode(e.descripcion),
+              pLabel = d.createElement("p"),
+              label = d.createElement("label"),
+              labNotas = d.createTextNode("Notas")
+        notas.setAttribute("id","mostrarNotas"+ e.nombre)
+        notas.setAttribute("style","display: none;")
+        notas.appendChild(notaTexto)
+        divPerfumes2.appendChild(notas)
+        label.setAttribute("id","notas"+ e.nombre)
+        label.setAttribute("class","close")
+        label.setAttribute("data-dismiss","modal")
+        label.setAttribute("data-toggle","modal")
+        label.appendChild(labNotas)
+        pLabel.appendChild(label)
+        divPerfumes2.appendChild(pLabel)
+        })
+                     
         //div1 a divTitulo
         divTitulo.classList.add("row")
         h3DivTitulo.appendChild(mujer)
