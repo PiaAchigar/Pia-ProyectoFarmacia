@@ -83,11 +83,12 @@ function printHtml(Json){
       
 }
 
-function agregar(productoClicCod, productosJson, tamanio) {
-  //console.log("agregar tamanio:"+ tamanio)
-  if(!existeEnCarrito(productoClicCod,tamanio)){//todo: corroborar el tamaño tb
-    let productoItem = new Item(productoClicCod,1,tamanio,productosJson)
-    console.log(productoItem)
+
+function agregar(nombre, productosJson, tamanio, codigo,stock,precio) {
+  
+  if(!existeEnCarrito(codigo,tamanio)){
+    let productoItem = new Item(nombre,1,tamanio,productosJson,codigo,stock, precio)
+    //console.log(productoItem)
     arrayCarrito.push(productoItem)
   }
   $('.agregarAlCarrito').text("")
@@ -95,6 +96,7 @@ function agregar(productoClicCod, productosJson, tamanio) {
     //console.log(arrayCarrito[k].codigo + " "+arrayCarrito[k].tamanio + " k:"+ k)
     let id = arrayCarrito[k].codigo + arrayCarrito[k].tamanio
     $(".agregarAlCarrito").append('<p style = "color:green;" id = ' + id + '></p>') 
+    //console.log(arrayCarrito[k].precio)
     $("#" + id).text(arrayCarrito[k].cantidad + "  "+ arrayCarrito[k].nombre+"  "+ " x "+ arrayCarrito[k].tamanio+"ml "+" $"+ arrayCarrito[k].precio*arrayCarrito[k].cantidad)
   }
   localStorage.setItem('elCarrito', JSON.stringify(arrayCarrito))// quiero hacer una f(x) que recupere el carrito si se cerro el navegador/ para recuperarlo tengo que hacer JSON.parse(arrayCarrito)
@@ -102,15 +104,11 @@ function agregar(productoClicCod, productosJson, tamanio) {
 function existeEnCarrito(productoCodigo, tamanio){
   //const existe = true
   if(arrayCarrito.length === 0){
-    console.log(arrayCarrito.length +"entro al primer if")
-    
     return existe = false
-    
   }else{
     for(let i = 0; i<arrayCarrito.length;i++){
-      console.log("entro"+ "i:"+ i + " "+ arrayCarrito[i].tamanio + " el tamaño q mando :"+ tamanio + "codigo:"+arrayCarrito[i].codigo+"cod q entra:"+ productoCodigo)
+      //console.log("entro"+ "i:"+ i + " "+ arrayCarrito[i].tamanio + " el tamaño q mando :"+ tamanio + "codigo:"+arrayCarrito[i].codigo+"cod q entra:"+ productoCodigo)
       if((tamanio == arrayCarrito[i].tamanio) && (productoCodigo == arrayCarrito[i].codigo)){
-        
         arrayCarrito[i].cantidad+=1
         existe = true
         return existe
@@ -124,13 +122,15 @@ function existeEnCarrito(productoCodigo, tamanio){
 
 function total(){
   let total = 0
-  for(let i = arrayCarrito.length; i>=0 ; i--){
-    total += arrayCarrito[i].precioTotal
+  for(let i = 0;i<arrayCarrito.length;i++){
+    total+= arrayCarrito[i].precio
   }
   return total
 }
-function eliminarCarrito(){
+
+function eliminarCarrito(){//no anda
   arrayCarrito = []
+  console.log(arrayCarrito)
   let caja = $('#agregarAlCarrito');
     while (caja.firstChild){
           caja.removeChild(caja.firstChild);

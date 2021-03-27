@@ -1,43 +1,41 @@
 const arrayCarrito = []
 const arrayJson = []
 
-// if(typeof value!=="number"){ return Promise.reject("eroor el valor....")} (si le paso algo distinto a un numero, entra )//Curso JavaScript: 48. Async - Await - #jonmircha
-
-$(document).ready(function(){ // $(windows).load(function (){para todo lo q quiera q se ejecute despues de cargado img})
+$(document).ready(function(){ 
   $.ajax({
     url: "./js/productos.json", 
     type: "GET",
     dataType: "json"
   })
-  .done(function(res){ // (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
+  .done(function(res){
       printHtml(res)
       $('.productoAlCarrito').click (function(el){
         //el.preventDefault();
-        //busco el valor del select y se lo mando a agregar
-        console.log("si te escucha" + el.currentTarget.value)
         const prod = d.getElementById(el.currentTarget.value)
-        console.log(prod.value)
-       //agregar()
+        res.productosJson.forEach((obj)=>{
+          if(obj.nombre == el.currentTarget.value){
+            //console.log("entro "+obj.nombre)
+            for(let i = 0;i<obj.presentacion.length;i++){
+              if(obj.presentacion[i].tamanio == prod.value){
+                  agregar(el.currentTarget.value,res.productosJson,prod.value,obj.presentacion[i].codigo,obj.presentacion[i].stock,obj.presentacion[i].precio)
+              }
+            }
+          }
+        })
+       
       })
-      d.getElementById("#notaBlack")
-      res.productosJson.forEach((obj)=>{
-        $(`#notas${obj.nombre}`).click(function(){ //me lo traigo x id = notas-Good-Girl TODO!!!!
-      $(`#mostrarNotas${obj.nombre}`).slideToggle(1500, function(){
-        console.log("hola "+obj.nombre)
-      })
-      })
-      
+        res.productosJson.forEach((obj)=>{
+          $(`#notas${obj.nombre}`).click(function(){
+            $(`#mostrarNotas${obj.nombre}`).slideToggle(1500, function(){
+            })
+          })
+        })
     })
-      //const tamanioValue = $(".tamanio option:selected" ).text(); // usa insertadjacentHTML
-      //$('.tamanio').on('change', function(este) {
-       //const tamanioTexto = $("#tamanio option:selected" ).text();
-    //const t = tamanioTexto.replace('ml','')
-    })
-    .fail(function (xhr, status, error){// (premisa fail) (si hay falla en el get, se ejecuta ésta) xhr =xml http recuest , o sea la recuest completa de lo que pasó / status= ej:400(sig q no se encontro el cliente) - numero de error/ error = descripcion del error
+    .fail(function (xhr, status, error){
       console.log(xhr), console.log(status), console.log(error), console.log(productosJson[0])
    })
-
 })
+
   $('.dark-mode-btn').click(function(e){
     darkMode(e,".dark-mode-btn", "dark-mode")
   })
@@ -47,58 +45,69 @@ $(document).ready(function(){ // $(windows).load(function (){para todo lo q quie
 
 
     //mostrarCarrito("#carrito-toggle")
-  //   $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
-  //     //$("#exampleModal").slideToggle(2000)
-  //     Swal.fire({
-  //       position: 'top-end',
-  //       title: 'Su Carrito',
-  //       width: 50%, //box-sizing: border-box
-  //       showConfirmButton: true,
-  //       showDenyButton: true,
-  //       denyButtonText: `Eliminar`,
-  //       keydownListenerCapture: true,
-  //       text: `Su saldo es ${total()}`
-  //     }).then((result) => {
-  //       /* Read more about isConfirmed, isDenied below */
-  //       if (result.isConfirmed) {
-  //         //tengo q mandarlo a mercadopago
-  //       } else if (result.isDenied) {
-  //         Swal.fire('Carrito Vacio')
-  //         arrayCarrito = []
-  //       }
-  //     })
-  //  })
+    $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
+      //$("#exampleModal").slideToggle(2000)
+      const pr = "Soy Variable"
+      Swal.fire({
+        position: 'top-end',
+        title: 'Su Carrito',
+        width: 500, //box-sizing: border-box
+        showConfirmButton: true,
+        showDenyButton: true,
+        denyButtonText: `Eliminar`,
+        keydownListenerCapture: true,
+        text:`${imprimirElArray()}`,
+        text: `Su saldo es ${total()}`,
+        iconHtml:`<div id= "swal"></div>`,
+      },
+      function(){
+        //Swal.getInput(imprimirElArray())
+      }
+      ).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          //tengo q mandarlo a mercadopago
+        } else if (result.isDenied) {
+          Swal.fire('Carrito Vacio')
+          arrayCarrito = []
+        }
+      })
+   })
+$("#swal").click(function(){
+  imprimirElArray()
+})
 
-//hacer https://es.stackoverflow.com/questions/91187/evento-onchange-jquery-html/91191
+   //Swal.getInput (imprimirElArray())
 $('#eliminar').click(eliminarCarrito)
 
 
-$("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
-    //$("#exampleModal").slideToggle(2000)
-    Swal.fire({
-      position: 'top-end',
-      title: 'Su Carrito',
-      showConfirmButton: true,
-      showDenyButton: true,
-      denyButtonText: `Eliminar`,
-      keydownListenerCapture: true,
-      text: `Su saldo es ${total()}`
-    }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        //tengo q mandarlo a mercadopago
-      } else if (result.isDenied) {
-        Swal.fire('Carrito Vacio')
-        arrayCarrito = []
-      }
-    })
- })
+// $("#carrito-toggle").click(function() {// todo: mirar en la docu swal como agrego un nodo
+//     //$("#exampleModal").slideToggle(2000)
+//     Swal.fire({
+//       position: 'top-end',
+//       title: 'Su Carrito',
+//       showConfirmButton: true,
+//       showDenyButton: true,
+//       denyButtonText: `Eliminar`,
+//       keydownListenerCapture: true,
+//       text: `Su saldo es ${total()}`
+//     }).then((result) => {
+//       /* Read more about isConfirmed, isDenied below */
+//       if (result.isConfirmed) {
+//         //tengo q mandarlo a mercadopago
+//       } else if (result.isDenied) {
+//         Swal.fire('Carrito Vacio')
+//         arrayCarrito = []
+//       }
+//     })
+//  })
  function imprimirElArray(){
    arrayCarrito.forEach(function(i) {
-    i.insertAdjacentHTML(
-      "afterend",
-      `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
-    );
+    return `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
+    // i.insertAdjacentHTML(
+    //   "afterend",
+    //   `${i.cantidad} ${i.nombre} $ ${i.precio*i.cantidad}`
+    // );
   });
   // arrayCarrito.forEach(i=> console.log(i.cantidad + " "+ i.nombre + " $"+ i.precio*i.cantidad))
  }
@@ -129,20 +138,8 @@ $("#comprar").click(function() {
     keydownListenerCapture: true
   })
   arrayCarrito = []
-})
-//})
- // $('#boton').click(function{
-//   $.ajax[{
-//     //url:,// signo de pregunta (?) = significa "parámetro"
-//     type: "GET",
-//     dataType: "json"
-//   }].done(function(resultado){// (premisa done) (si el get funciona bien, se ejecuta ésta) -> Callback : f(x) que se ejecuta luego de finalizada la f(x) primaria / resultado = json
-//     console.log(resultado)
-//   })
-//   .fail(function (xhr, status, error){// (premisa fail) (si hay falla en el get, se ejecuta ésta) xhr =xml http recuest , o sea la recuest completa de lo que pasó / status= ej:400(sig q no se encontro el cliente) - numero de error/ error = descripcion del error
-//     console.log(xhr), console.log(status), console.log(error)
-//   }) // puedo reemplazar .done y .fail -> .then (function , function)
-// })
+  })
+
   window.onscroll = function () { myFunction() };
 
   // Get the header
@@ -161,7 +158,7 @@ $("#comprar").click(function() {
   }
 
 //--------- Lista de Tareas -----
-// - Agregar https://sweetalert2.github.io/
+// - Agregar  nodo https://sweetalert2.github.io/
 // - Base de Datos de Clientes, Login
 // - Agregar metodos de pago
 // ver Curso JavaScript: 101. DOM: Ejercicios Prácticos | Validación de Formularios con HTML5
