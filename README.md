@@ -1,0 +1,2 @@
+# Proyecto Desarrollo Web - Coder House
+_Proyecto sobre Farmacia y Perfumeria {"A?":"B","a":5,"d":"B","h":"www.canva.com","c":"DAEqo5-hO0s","i":"Mvw6j9_p_qOhwSRbeeHXMw","b":1632225437834,"A":[{"A?":"I","A":658.1308230375284,"B":238.13082303752844,"D":603.7383539249431,"C":603.7383539249431,"a":{"B":{"A":{"A":"MAEmuuSzLHA","B":1},"B":{"D":603.7383539249431,"C":603.7383539249431}}}}],"B":1080,"C":1920}
