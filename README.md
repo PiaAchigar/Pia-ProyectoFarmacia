@@ -4,7 +4,7 @@ _Proyecto sobre Farmacia y Perfumeria_ 🤖
 
 ### Proyecto de María Pía Achigar.
 
-![Print del sitio] ()
+![Print del sitio](/multimedia/HunkoLogo.jpg?raw=true)
 
 ## SEO
 
