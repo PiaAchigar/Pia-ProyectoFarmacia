@@ -1,9 +1,12 @@
 # Proyecto Desarrollo Web - Coder House
-_Proyecto sobre Farmacia y Perfumeria 
+
+_Proyecto sobre Farmacia y Perfumeria 🤖
+
 ###Proyecto de María Pía Achigar.
+
 ![Print del sitio] ()
 
-## SEO 🔍
+## SEO
 
 * Title y meta description únicos por cada pag
 * Etiquetas para resaltar el contenido
