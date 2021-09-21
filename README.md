@@ -1,2 +1,14 @@
 # Proyecto Desarrollo Web - Coder House
-_Proyecto sobre Farmacia y Perfumeria {"A?":"B","a":5,"d":"B","h":"www.canva.com","c":"DAEqo5-hO0s","i":"Mvw6j9_p_qOhwSRbeeHXMw","b":1632225437834,"A":[{"A?":"I","A":658.1308230375284,"B":238.13082303752844,"D":603.7383539249431,"C":603.7383539249431,"a":{"B":{"A":{"A":"MAEmuuSzLHA","B":1},"B":{"D":603.7383539249431,"C":603.7383539249431}}}}],"B":1080,"C":1920}
+_Proyecto sobre Farmacia y Perfumeria 
+###Proyecto de María Pía Achigar.
+![Print del sitio] ()
+
+## SEO 🔍
+
+* Title y meta description únicos por cada pag
+* Etiquetas para resaltar el contenido
+* H1 único por landing
+* H2, H3, H4, H5 y H6 en todas las landings resaltando las keywords más importantes.
+* Textos optimizados para abarcar el scope del ecommerce
+* Todas las imágenes cuentan con su alt para que lo reconozca Google en sus búsquedas
+* Se crea página 404 por cualquier error invitando al usuario a que vuelva a la home
