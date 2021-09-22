@@ -1,7 +1,6 @@
 # Proyecto Desarrollo Web - Coder House
 
-_Proyecto sobre Farmacia y Perfumeria_   ![image](https://user-images.githubusercontent.com/76546697/134269611-0e68de3f-c3fa-437f-8268-c859e2dfc46d.png)
-![image](https://user-images.githubusercontent.com/76546697/134270095-4d6445a1-812d-4c77-9a45-8478b3e4cd13.png)
+_Proyecto sobre Farmacia y Perfumeria_   :fa-plus-square: ![image](https://user-images.githubusercontent.com/76546697/134269611-0e68de3f-c3fa-437f-8268-c859e2dfc46d.png)
 
 
 ### Proyecto de María Pía Achigar.
