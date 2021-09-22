@@ -2,7 +2,7 @@
 
 ![Print del sitio](/multimedia/HunkoLogo.jpg?raw=true)
   
-![image](https://user-images.githubusercontent.com/76546697/134269611-0e68de3f-c3fa-437f-8268-c859e2dfc46d.png)  _Proyecto sobre Farmacia y Perfumeria_ 
+![image](https://user-images.githubusercontent.com/76546697/134269611-0e68de3f-c3fa-437f-8268-c859e2dfc46d.png) ### Proyecto sobre Farmacia y Perfumeria
 
 
 ## Proyecto de María Pía Achigar.
