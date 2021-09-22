@@ -18,7 +18,7 @@
 * H1 único por html.
 * H2, H3, H4, H5 y H6.
 * Respeto de Jerarquía de etiquetas.
-* Paginas ordenadas por Jrarquía.
-* Las imágenes cuentan con su alt para optimizar la busqueda del navegador.
+* Paginas ordenadas por Jerarquía.
+* Las imágenes cuentan con su alt para optimizar la búsqueda del navegador.
 
 ## NOTA : 10
