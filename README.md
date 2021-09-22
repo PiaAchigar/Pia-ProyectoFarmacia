@@ -17,7 +17,8 @@
 * Uso de etiquetas apropiadas para su contenído.
 * H1 único por html.
 * H2, H3, H4, H5 y H6.
-* Respeto de Jerarquia de etiquetas,
-* Todas las imágenes cuentan con su alt para que lo reconozca Google en sus búsquedas.
+* Respeto de Jerarquía de etiquetas.
+* Paginas ordenadas por Jrarquía.
+* Las imágenes cuentan con su alt para optimizar la busqueda del navegador.
 
 ## NOTA : 10
