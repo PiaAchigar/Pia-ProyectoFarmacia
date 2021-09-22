@@ -1,12 +1,15 @@
 # Proyecto Desarrollo Web - Coder House
 
-_Proyecto sobre Farmacia y Perfumeria_ 🤖
+_Proyecto sobre Farmacia y Perfumeria_ �![image](https://user-images.githubusercontent.com/76546697/134269611-0e68de3f-c3fa-437f-8268-c859e2dfc46d.png)
+
 
 ### Proyecto de María Pía Achigar.
 
 ![Print del sitio](/multimedia/HunkoLogo.jpg?raw=true)
 
-* [Deploy](https://piaachigar.github.io/Pia-ProyectoFarmacia/) - Versión online del proyecto
+## Versión online del proyecto
+
+* [Deploy](https://piaachigar.github.io/Pia-ProyectoFarmacia/)
 
 ## SEO
 
