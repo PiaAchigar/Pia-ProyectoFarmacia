@@ -8,8 +8,8 @@
 
 ### Versión online del proyecto
 
-* [Deploy](https://piaachigar.github.io/Pia-ProyectoFarmacia/)
-* http://farmaciashunko.infinityfreeapp.com/
+* [Deploy](https://piaachigar.github.io/Pia-ProyectoFarmacia/) GitHub pages
+* http://farmaciashunko.infinityfreeapp.com/ InfinityFree 
 
 ## SEO
 
