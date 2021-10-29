@@ -9,6 +9,7 @@
 ### Versión online del proyecto
 
 * [Deploy](https://piaachigar.github.io/Pia-ProyectoFarmacia/)
+* http://farmaciashunko.infinityfreeapp.com/
 
 ## SEO
 
